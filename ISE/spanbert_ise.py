@@ -64,7 +64,7 @@ class SpanBertISE(BaseISE):
 
     def print_start(self, relation_instruction, threshold, seed_query, num_tuples):
         # 
-        self.level_log("\n\n____", mode = 'w')
+        self.level_log("\n\n____")
         self.level_log("Parameters:")
         self.level_log(f"Client key   = {self.GOOGLE_API_KEY}")
         self.level_log(f"Engine key   = {self.ENGINE_ID}")

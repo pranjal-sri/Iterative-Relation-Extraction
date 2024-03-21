@@ -42,10 +42,9 @@ class BaseISE:
         self.url_stats['accepted_relations'] += n_accepted_relations
 
     
-    def level_log(self, message, level =0, mode = 'a'):
+    def level_log(self, message, level =0):
         indent = ['\t'] * level
         indent = ''.join(indent)
-        # with open(, mode) as f: 
         print(f"{indent}{message}") 
 
     def download_text_from_url(self, url):
