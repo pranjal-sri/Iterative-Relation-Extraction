@@ -1,4 +1,5 @@
 from ISE.spanbert_ise import SpanBertISE
+from ISE.gemini_ise import GeminiISE
 import sys
 
 def parse_arguments():
@@ -38,7 +39,7 @@ def main():
     # print("Threshold:", t)
     # print("Query:", q)
     # print("K:", k)
-
+    # import pdb; pdb.set_trace();
     f = open('out.log', 'w')
     original_out = sys.stdout
     sys.stdout = f
@@ -46,9 +47,10 @@ def main():
     if mode == '-spanbert':
         ise = SpanBertISE(google_api_key, google_engine_id, gemini_api_key)
     else:
-        ise = None # gemini_ise
+        ise = GeminiISE(google_api_key, google_engine_id, gemini_api_key)
     
     ise.ise(q, k, r, t)
+    
     sys.stdout = original_out
     
 if __name__ == "__main__":

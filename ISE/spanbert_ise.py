@@ -21,7 +21,7 @@ class SpanBertISE(BaseISE):
         query_bank.pop(q_max) 
         return q_max    
 
-    def filter_entityblocks(self, entity_blocks, relation_instruction):
+    def filter_entityblocks(self, entity_blocks, relation_instruction, sentence):
         # Recives a list of candidate entities and filters them
         relation_preds = self.spb.predict(entity_blocks)
         n_extracted_relations = 0
@@ -50,7 +50,7 @@ class SpanBertISE(BaseISE):
                         if q_cand not in self.used_queries: self.query_bank[q_cand] = conf
 
                 self.level_log('=== Extracted Relation ===', level =2) 
-                self.level_log(f'Input tokens: {candidate["tokens"]}', level = 2)
+                self.level_log(f'Input tokens: {tokens}', level = 2)
                 self.level_log(f'Output Confidence: {conf} ; Subject: {sub} ; Object: {obj} ;', level = 2)
                 if STATE == REJECT:
                     self.level_log('Confidence is lower than threshold confidence. Ignoring this.', level = 2)
@@ -76,8 +76,9 @@ class SpanBertISE(BaseISE):
         self.level_log(f"# of Tuples  = {num_tuples}")
         self.level_log("Loading necessary libraries; This should take a minute or so ...)")
     
-    def log_relations(self, relations, iterations):
-        self.level_log(f"================== ALL RELATIONS for per:employee_of ( {len(relations)} ) =================")
+    def log_relations(self,relation_instruction,  relations, iterations):
+        relation_name = RELATIONS_DICT[relation_instruction]
+        self.level_log(f"================== ALL RELATIONS for {relation_name} ( {len(relations)} ) =================")
         rel_list = [(k, v) for k, v in relations.items()]
         sorted_rel_list = sorted(rel_list, key= lambda x: -x[1])
         sorted_relations = {k: v for k, v in sorted_rel_list}
@@ -98,7 +99,7 @@ class SpanBertISE(BaseISE):
             q = self.get_query_from_bank(self.query_bank) 
             if q is None:
                 print('ISE has "stalled" before retrieving k high-confidence tuples')
-                self.log_relations(self.X)
+                self.log_relations(relation_instruction, self.X, iteration)
                
             self.level_log(f'=========== Iteration: {iteration} - Query: {q} ===========')
             self.used_queries.add(q) 
@@ -108,5 +109,8 @@ class SpanBertISE(BaseISE):
                 self.level_log(f'URL ({i+1} / {len(urls)}): {url}')
                 self.process_url(url, relation_instruction)
 
-        self.log_relations(self.X, iteration)
+                if len(self.X) >= k:
+                    break
+
+            self.log_relations(self.X, iteration)
         

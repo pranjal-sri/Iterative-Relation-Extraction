@@ -35,8 +35,8 @@ class BaseISE:
             
         if len(candidates) == 0:
             return
-        
-        n_extracted_relations, n_accepted_relations = self.filter_entityblocks(candidates, relation_instruction)
+        # import pdb; pdb.set_trace()
+        n_extracted_relations, n_accepted_relations = self.filter_entityblocks(candidates, relation_instruction, sentence)
         if n_extracted_relations>0: self.url_stats['sentences_with_annotations'] += 1
         self.url_stats['candidate_relations'] += n_extracted_relations
         self.url_stats['accepted_relations'] += n_accepted_relations
@@ -54,8 +54,9 @@ class BaseISE:
             if response.status_code == 200:
                 soup = BeautifulSoup(response.content, 'html.parser')
                 text = soup.get_text()
-                text = re.sub(r'\n+', '\n', text)
-                text = re.sub(r'\t+', '\t', text)
+                text = re.sub(r'\n+', ' ', text)
+                text = re.sub(r'\t+', ' ', text)
+                text = re.sub(r'\s+', ' ', text)
                 if text is not None and len(text)>10000:
                     self.level_log(f'trimming webpage length from {len(text)} to 10000', level = 1)
                     text = text[:10000]
@@ -70,6 +71,7 @@ class BaseISE:
             return None
     
     def process_url(self, url, relation_instruction):
+        # import pdb; pdb.set_trace();
         text = self.download_text_from_url(url)
         if text is None:
             self.level_log('Skipping the URL as no text was extracted', level = 1)
@@ -89,8 +91,8 @@ class BaseISE:
         self.level_log(f'Relations extracted from this website: {self.url_stats["accepted_relations"]} (Overall: {self.url_stats["candidate_relations"]})', level = 1)
         self.level_log('\n')
         self.url_stats["sentences_with_annotations"] = 0
-        self.url_stats["relations_extracted"] = 0
         self.url_stats["candidate_relations"] = 0
+        self.url_stats["accepted_relations"] = 0
 
     def match_relation(self, predicted_relation, relation_instruction):
         match_template = RELATIONS_INTERNAL_REP[relation_instruction]
