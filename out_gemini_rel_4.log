@@ -1,0 +1,333 @@
+
+
+____
+Parameters:
+Client key   = AIzaSyDuSM_JnE7BUIaW54cgZLIcNgEwm79URsg
+Engine key   = 3430a164067404160
+Gemini key   = AIzaSyCb33bJ89z6RxiXUmce0_zU2BLfJ_J9Ym4
+Method       = gemini
+Relation     = Top_Member_Employees
+Threshold    = 0.7
+Query        = bill gates microsoft
+# of Tuples  = 10
+Loading necessary libraries; This should take a minute or so ...)
+=========== Iteration: 1 - Query: bill gates microsoft ===========
+URL (1 / 10): https://en.wikipedia.org/wiki/Bill_Gates
+	Fetching text from url...
+	trimming webpage length from 142952 to 10000
+	Webpage length (num characters): 10000
+	Annotating the webpage using spacy ...
+	Extracted 51 sentences. Processing each sentence one by one to check for presence of right pair of named entity types; if so, will run the second pipeline ...
+	Processed 5 / 51 sentences
+	Processed 10 / 51 sentences
+	Processed 15 / 51 sentences
+	Processed 20 / 51 sentences
+	Processed 25 / 51 sentences
+		=== Extracted Relation ===
+		Sentence: In June 2008, Gates transitioned into a part-time role at Microsoft and full-time work at the Bill & Melinda Gates Foundation, the private charitable foundation he and his then-wife Melinda had established in 2000.[6]
+		Subject: Bill & Melinda Gates Foundation ; Object: Gates ;
+		Adding to set of extracted relations
+		================
+
+		=== Extracted Relation ===
+		Sentence: He stepped down as chairman of the Microsoft board in February 2014 and assumed the role of technology adviser to support newly appointed CEO Satya Nadella.[7]
+		Subject: Microsoft ; Object: Satya Nadella ;
+		Adding to set of extracted relations
+		================
+
+	Processed 30 / 51 sentences
+	Processed 35 / 51 sentences
+	Processed 40 / 51 sentences
+	Processed 45 / 51 sentences
+	Processed 50 / 51 sentences
+
+
+	Extracted annotations for  2  out of total  51  sentences
+	Relations extracted from this website: 2 (Overall: 2)
+
+
+URL (2 / 10): https://twitter.com/BillGates
+	Fetching text from url...
+	Failed to retrieve content from URL: https://twitter.com/BillGates. Status code: 400
+	Skipping the URL as no text was extracted
+URL (3 / 10): https://www.instagram.com/thisisbillgates/
+	Fetching text from url...
+	Webpage length (num characters): 19
+	Annotating the webpage using spacy ...
+	Extracted 1 sentences. Processing each sentence one by one to check for presence of right pair of named entity types; if so, will run the second pipeline ...
+
+
+	Extracted annotations for  0  out of total  1  sentences
+	Relations extracted from this website: 0 (Overall: 0)
+
+
+URL (4 / 10): https://news.microsoft.com/tag/bill-gates/
+	Fetching text from url...
+	Failed to retrieve content from URL: https://news.microsoft.com/tag/bill-gates/. Status code: 403
+	Skipping the URL as no text was extracted
+URL (5 / 10): https://www.britannica.com/biography/Bill-Gates
+	Fetching text from url...
+	trimming webpage length from 12445 to 10000
+	Webpage length (num characters): 10000
+	Annotating the webpage using spacy ...
+	Extracted 62 sentences. Processing each sentence one by one to check for presence of right pair of named entity types; if so, will run the second pipeline ...
+	Processed 5 / 62 sentences
+	Processed 10 / 62 sentences
+	Processed 15 / 62 sentences
+	Processed 20 / 62 sentences
+	Processed 25 / 62 sentences
+	Processed 30 / 62 sentences
+	Processed 35 / 62 sentences
+	Processed 40 / 62 sentences
+		=== Extracted Relation ===
+		Sentence: Bill Gates (born October 28, 1955, Seattle, Washington, U.S.) is an American computer programmer and entrepreneur who cofounded Microsoft Corporation, the world’s largest personal-computer software company.
+		Subject: Microsoft Corporation ; Object: Bill Gates ;
+		Adding to set of extracted relations
+		================
+
+	Processed 45 / 62 sentences
+	Processed 50 / 62 sentences
+	Processed 55 / 62 sentences
+	Processed 60 / 62 sentences
+
+
+	Extracted annotations for  1  out of total  62  sentences
+	Relations extracted from this website: 1 (Overall: 1)
+
+
+URL (6 / 10): https://www.linkedin.com/in/williamhgates
+	Fetching text from url...
+	Failed to retrieve content from URL: https://www.linkedin.com/in/williamhgates. Status code: 999
+	Skipping the URL as no text was extracted
+URL (7 / 10): https://www.forbes.com/profile/bill-gates/
+	Fetching text from url...
+	Webpage length (num characters): 6848
+	Annotating the webpage using spacy ...
+	Extracted 38 sentences. Processing each sentence one by one to check for presence of right pair of named entity types; if so, will run the second pipeline ...
+	Processed 5 / 38 sentences
+	Processed 10 / 38 sentences
+	Processed 15 / 38 sentences
+	Processed 20 / 38 sentences
+	Processed 25 / 38 sentences
+	Processed 30 / 38 sentences
+	Processed 35 / 38 sentences
+
+
+	Extracted annotations for  0  out of total  38  sentences
+	Relations extracted from this website: 0 (Overall: 0)
+
+
+URL (8 / 10): https://answers.microsoft.com/en-us/outlook_com/forum/all/microsoft-and-bill-gates-are-so-damn-screwed-up/cd76d0e2-ece4-45db-8886-00d557d593e2
+	Fetching text from url...
+	Webpage length (num characters): 13
+	Annotating the webpage using spacy ...
+	Extracted 1 sentences. Processing each sentence one by one to check for presence of right pair of named entity types; if so, will run the second pipeline ...
+
+
+	Extracted annotations for  0  out of total  1  sentences
+	Relations extracted from this website: 0 (Overall: 0)
+
+
+URL (9 / 10): https://www.gatesnotes.com/Home
+	Fetching text from url...
+	Failed to retrieve content from URL: https://www.gatesnotes.com/Home. Status code: 403
+	Skipping the URL as no text was extracted
+URL (10 / 10): https://www.facebook.com/BillGates/
+	Fetching text from url...
+	Webpage length (num characters): 12
+	Annotating the webpage using spacy ...
+	Extracted 1 sentences. Processing each sentence one by one to check for presence of right pair of named entity types; if so, will run the second pipeline ...
+
+
+	Extracted annotations for  0  out of total  1  sentences
+	Relations extracted from this website: 0 (Overall: 0)
+
+
+================== ALL RELATIONS for Top_Member_Employees ( 3 ) =================
+Subject: Microsoft	| Object: Satya Nadella
+Subject: Microsoft Corporation	| Object: Bill Gates
+Subject: Bill & Melinda Gates Foundation	| Object: Gates
+Total # of iterations = 1
+=========== Iteration: 2 - Query: microsoft satya nadella ===========
+URL (1 / 10): https://news.microsoft.com/exec/satya-nadella/
+	Fetching text from url...
+	Failed to retrieve content from URL: https://news.microsoft.com/exec/satya-nadella/. Status code: 403
+	Skipping the URL as no text was extracted
+URL (2 / 10): https://en.wikipedia.org/wiki/Satya_Nadella
+	Fetching text from url...
+	trimming webpage length from 30525 to 10000
+	Webpage length (num characters): 10000
+	Annotating the webpage using spacy ...
+	Extracted 86 sentences. Processing each sentence one by one to check for presence of right pair of named entity types; if so, will run the second pipeline ...
+	Processed 5 / 86 sentences
+		=== Extracted Relation ===
+		Sentence: He is the executive chairman and CEO of Microsoft, succeeding Steve Ballmer in 2014 as CEO[2][3] and John W. Thompson in 2021 as chairman.[4][5] Before becoming CEO, he was the executive vice president of Microsoft's cloud and enterprise group, responsible for building and running the company's
+		Subject: Microsoft ; Object: Steve Ballmer ;
+		Adding to set of extracted relations
+		================
+
+		=== Extracted Relation ===
+		Sentence: He is the executive chairman and CEO of Microsoft, succeeding Steve Ballmer in 2014 as CEO[2][3] and John W. Thompson in 2021 as chairman.[4][5] Before becoming CEO, he was the executive vice president of Microsoft's cloud and enterprise group, responsible for building and running the company's
+		Subject: Microsoft ; Object: John W. Thompson ;
+		Adding to set of extracted relations
+		================
+
+	Processed 10 / 86 sentences
+	Processed 15 / 86 sentences
+		=== Extracted Relation ===
+		Sentence: Microsoft 1992–2014 Nadella on his first day as CEO of Microsoft, with former CEOs Bill Gates (left) and Steve Ballmer (right)
+		Subject: Microsoft ; Object: Nadella ;
+		Adding to set of extracted relations
+		================
+
+		=== Extracted Relation ===
+		Sentence: Microsoft 1992–2014 Nadella on his first day as CEO of Microsoft, with former CEOs Bill Gates (left) and Steve Ballmer (right)
+		Subject: Microsoft ; Object: Bill Gates ;
+		Adding to set of extracted relations
+		================
+
+		=== Extracted Relation ===
+		Sentence: Microsoft 1992–2014 Nadella on his first day as CEO of Microsoft, with former CEOs Bill Gates (left) and Steve Ballmer (right)
+		Subject: Microsoft ; Object: Steve Ballmer ;
+		Duplicate. Ignoring this.
+		================
+
+	Processed 20 / 86 sentences
+		=== Extracted Relation ===
+		Sentence: Nadella worked as the senior vice-president of research and development (R&D) for the Online Services Division and vice-president of the Microsoft Business Division.
+		Subject: Microsoft ; Object: Nadella ;
+		Duplicate. Ignoring this.
+		================
+
+	Processed 25 / 86 sentences
+	Processed 30 / 86 sentences
+	Processed 35 / 86 sentences
+	Processed 40 / 86 sentences
+	Processed 45 / 86 sentences
+	Processed 50 / 86 sentences
+	Processed 55 / 86 sentences
+	Processed 60 / 86 sentences
+	Processed 65 / 86 sentences
+	Processed 70 / 86 sentences
+	Processed 75 / 86 sentences
+	Processed 80 / 86 sentences
+	Processed 85 / 86 sentences
+
+
+	Extracted annotations for  3  out of total  86  sentences
+	Relations extracted from this website: 4 (Overall: 6)
+
+
+URL (3 / 10): https://www.linkedin.com/in/satyanadella
+	Fetching text from url...
+	Failed to retrieve content from URL: https://www.linkedin.com/in/satyanadella. Status code: 999
+	Skipping the URL as no text was extracted
+URL (4 / 10): https://twitter.com/satyanadella
+	Fetching text from url...
+	Failed to retrieve content from URL: https://twitter.com/satyanadella. Status code: 400
+	Skipping the URL as no text was extracted
+URL (5 / 10): https://blogs.microsoft.com/blog/2024/03/19/mustafa-suleyman-deepmind-and-inflection-co-founder-joins-microsoft-to-lead-copilot/
+	Fetching text from url...
+	Failed to retrieve content from URL: https://blogs.microsoft.com/blog/2024/03/19/mustafa-suleyman-deepmind-and-inflection-co-founder-joins-microsoft-to-lead-copilot/. Status code: 403
+	Skipping the URL as no text was extracted
+URL (6 / 10): https://www.cnn.com/2023/12/26/tech/satya-nadella-ceo-of-the-year/index.html
+	Fetching text from url...
+	trimming webpage length from 15767 to 10000
+	Webpage length (num characters): 10000
+	Annotating the webpage using spacy ...
+	Extracted 68 sentences. Processing each sentence one by one to check for presence of right pair of named entity types; if so, will run the second pipeline ...
+		=== Extracted Relation ===
+		Sentence: Microsoft’s Satya Nadella is CNN Business’ CEO of the Year | CNN Business CNN values your feedback 1.
+		Subject: Microsoft ; Object: Satya Nadella ;
+		Duplicate. Ignoring this.
+		================
+
+	Processed 5 / 68 sentences
+	Processed 10 / 68 sentences
+	Processed 15 / 68 sentences
+	Processed 20 / 68 sentences
+		=== Extracted Relation ===
+		Sentence: In 2023, the company’s CEO Satya Nadella made a multi-billion dollar investment in AI, commercialized and added AI tools like ChatGPT into its suite of products before rivals, and stunned industry onlookers with his ability to handle a crisis quickly, calmly and thoughtfully.
+		Subject: Microsoft ; Object: Satya Nadella ;
+		Duplicate. Ignoring this.
+		================
+
+		=== Extracted Relation ===
+		Sentence: That’s why CNN Business’ staff chose Nadella as the CEO of the Year, beating out other contenders including Chase CEO Jamie Dimon, OpenAI CEO Sam Altman and Nvidia CEO Jensen Huang.
+		Subject: CNN Business ; Object: Nadella ;
+		Adding to set of extracted relations
+		================
+
+		=== Extracted Relation ===
+		Sentence: That’s why CNN Business’ staff chose Nadella as the CEO of the Year, beating out other contenders including Chase CEO Jamie Dimon, OpenAI CEO Sam Altman and Nvidia CEO Jensen Huang.
+		Subject: Chase ; Object: Jamie Dimon ;
+		Adding to set of extracted relations
+		================
+
+		=== Extracted Relation ===
+		Sentence: That’s why CNN Business’ staff chose Nadella as the CEO of the Year, beating out other contenders including Chase CEO Jamie Dimon, OpenAI CEO Sam Altman and Nvidia CEO Jensen Huang.
+		Subject: OpenAI ; Object: Sam Altman ;
+		Adding to set of extracted relations
+		================
+
+		=== Extracted Relation ===
+		Sentence: That’s why CNN Business’ staff chose Nadella as the CEO of the Year, beating out other contenders including Chase CEO Jamie Dimon, OpenAI CEO Sam Altman and Nvidia CEO Jensen Huang.
+		Subject: Nvidia ; Object: Jensen Huang ;
+		Adding to set of extracted relations
+		================
+
+	Processed 25 / 68 sentences
+	Processed 30 / 68 sentences
+		=== Extracted Relation ===
+		Sentence: CEO of the Year, Pfizer’s Albert Bourla).
+		Subject: Pfizer ; Object: Albert Bourla ;
+		Adding to set of extracted relations
+		================
+
+	Processed 35 / 68 sentences
+		=== Extracted Relation ===
+		Sentence: As Gil Luria, a senior research analyst at wealth management firm DA Davidson, puts it: “His ability to steer the aircraft carrier that is Microsoft into this new era has been nothing short of remarkable.”
+		Subject: DA Davidson ; Object: Gil Luria ;
+		Adding to set of extracted relations
+		================
+
+	Processed 40 / 68 sentences
+	Processed 45 / 68 sentences
+	Processed 50 / 68 sentences
+	Processed 55 / 68 sentences
+	Processed 60 / 68 sentences
+		=== Extracted Relation ===
+		Sentence: Nadella swiftly picked up the phone and offered to hire Altman at Microsoft to lead a new AI research lab, along with one of the co-founders, Greg Brockman, and any of the 700 Open AI employees who wanted to leave the company.
+		Subject: Microsoft ; Object: Nadella ;
+		Duplicate. Ignoring this.
+		================
+
+		=== Extracted Relation ===
+		Sentence: Nadella swiftly picked up the phone and offered to hire Altman at Microsoft to lead a new AI research lab, along with one of the co-founders, Greg Brockman, and any of the 700 Open AI employees who wanted to leave the company.
+		Subject: Open AI ; Object: Greg Brockman ;
+		Adding to set of extracted relations
+		================
+
+	Processed 65 / 68 sentences
+
+
+	Extracted annotations for  6  out of total  68  sentences
+	Relations extracted from this website: 7 (Overall: 10)
+
+
+================== ALL RELATIONS for Top_Member_Employees ( 14 ) =================
+Subject: Microsoft	| Object: Satya Nadella
+Subject: CNN Business	| Object: Nadella
+Subject: Microsoft	| Object: Steve Ballmer
+Subject: Microsoft Corporation	| Object: Bill Gates
+Subject: Microsoft	| Object: Nadella
+Subject: DA Davidson	| Object: Gil Luria
+Subject: OpenAI	| Object: Sam Altman
+Subject: Open AI	| Object: Greg Brockman
+Subject: Microsoft	| Object: Bill Gates
+Subject: Nvidia	| Object: Jensen Huang
+Subject: Pfizer	| Object: Albert Bourla
+Subject: Microsoft	| Object: John W. Thompson
+Subject: Chase	| Object: Jamie Dimon
+Subject: Bill & Melinda Gates Foundation	| Object: Gates
+Total # of iterations = 2

@@ -1,0 +1,163 @@
+
+
+____
+Parameters:
+Client key   = AIzaSyDuSM_JnE7BUIaW54cgZLIcNgEwm79URsg
+Engine key   = 3430a164067404160
+Gemini key   = AIzaSyCb33bJ89z6RxiXUmce0_zU2BLfJ_J9Ym4
+Method       = gemini
+Relation     = Live_In
+Threshold    = 0.7
+Query        = megan rapinoe redding
+# of Tuples  = 2
+Loading necessary libraries; This should take a minute or so ...)
+=========== Iteration: 1 - Query: megan rapinoe redding ===========
+URL (1 / 10): https://www.redding.com/story/news/local/2019/07/08/after-world-cup-win-and-local-controversy-megan-rapinoe-still-praises-hometown-love/1679235001/
+	Fetching text from url...
+	Webpage length (num characters): 4780
+	Annotating the webpage using spacy ...
+	Extracted 31 sentences. Processing each sentence one by one to check for presence of right pair of named entity types; if so, will run the second pipeline ...
+	Processed 5 / 31 sentences
+	Processed 10 / 31 sentences
+	Processed 15 / 31 sentences
+	Processed 20 / 31 sentences
+	Processed 25 / 31 sentences
+	Processed 30 / 31 sentences
+
+
+	Extracted annotations for  0  out of total  31  sentences
+	Relations extracted from this website: 0 (Overall: 0)
+
+
+URL (2 / 10): https://www.mercurynews.com/2019/07/06/womens-world-cup-hometown-star-out-of-step-in-californias-trump-country/
+	Fetching text from url...
+	trimming webpage length from 19702 to 10000
+	Webpage length (num characters): 10000
+	Annotating the webpage using spacy ...
+	Extracted 57 sentences. Processing each sentence one by one to check for presence of right pair of named entity types; if so, will run the second pipeline ...
+	Processed 5 / 57 sentences
+	Processed 10 / 57 sentences
+		=== Extracted Relation ===
+		Sentence: U.S. women's national team winger Megan Rapinoe grew up in Redding.
+		Subject: Megan Rapinoe ; Object: Redding ;
+		Adding to set of extracted relations
+		================
+
+	Processed 15 / 57 sentences
+	Processed 20 / 57 sentences
+		=== Extracted Relation ===
+		Sentence: (Anda Chu/Bay Area News Group)United States midfielder Samantha Mewis (3), center, is hugged by teammate Megan Rapinoe (15), right, after scoring during the second half of their friendly game at Levi's Stadium in Santa Clara, Calf., on Sunday, May 12, 2019.
+		Subject: Samantha Mewis ; Object: Bay Area ;
+		Adding to set of extracted relations
+		================
+
+		=== Extracted Relation ===
+		Sentence: (Anda Chu/Bay Area News Group)United States midfielder Samantha Mewis (3), center, is hugged by teammate Megan Rapinoe (15), right, after scoring during the second half of their friendly game at Levi's Stadium in Santa Clara, Calf., on Sunday, May 12, 2019.
+		Subject: Samantha Mewis ; Object: United States ;
+		Adding to set of extracted relations
+		================
+
+		=== Extracted Relation ===
+		Sentence: (Anda Chu/Bay Area News Group)United States midfielder Samantha Mewis (3), center, is hugged by teammate Megan Rapinoe (15), right, after scoring during the second half of their friendly game at Levi's Stadium in Santa Clara, Calf., on Sunday, May 12, 2019.
+		Subject: Megan Rapinoe ; Object: Bay Area ;
+		Adding to set of extracted relations
+		================
+
+		=== Extracted Relation ===
+		Sentence: (Anda Chu/Bay Area News Group)United States midfielder Samantha Mewis (3), center, is hugged by teammate Megan Rapinoe (15), right, after scoring during the second half of their friendly game at Levi's Stadium in Santa Clara, Calf., on Sunday, May 12, 2019.
+		Subject: Megan Rapinoe ; Object: United States ;
+		Adding to set of extracted relations
+		================
+
+		=== Extracted Relation ===
+		Sentence: U.S. women's national team winger Megan Rapinoe grew up in Redding.
+		Subject: Megan Rapinoe ; Object: Redding ;
+		Duplicate. Ignoring this.
+		================
+
+	Processed 25 / 57 sentences
+		=== Extracted Relation ===
+		Sentence: (Anda Chu/Bay Area News Group)United states forward Megan Rapinoe (15) runs after a ball during the second half of her teams friendly game versus South Africa at Levi's Stadium in Santa Clara, Calf., on Sunday, May 12, 2019.
+		Subject: Megan Rapinoe ; Object: Bay Area ;
+		Duplicate. Ignoring this.
+		================
+
+		=== Extracted Relation ===
+		Sentence: (Anda Chu/Bay Area News Group)United states forward Megan Rapinoe (15) runs after a ball during the second half of her teams friendly game versus South Africa at Levi's Stadium in Santa Clara, Calf., on Sunday, May 12, 2019.
+		Subject: Megan Rapinoe ; Object: United States ;
+		Duplicate. Ignoring this.
+		================
+
+		=== Extracted Relation ===
+		Sentence: (Anda Chu/Bay Area News Group)United states forward Megan Rapinoe (15) runs after a ball during the second half of her teams friendly game versus South Africa at Levi's Stadium in Santa Clara, Calf., on Sunday, May 12, 2019.
+		Subject: Megan Rapinoe ; Object: Santa Clara ;
+		Adding to set of extracted relations
+		================
+
+		=== Extracted Relation ===
+		Sentence: (Anda Chu/Bay Area News Group)United states forward Megan Rapinoe (15) runs after a ball during the second half of her teams friendly game versus South Africa at Levi's Stadium in Santa Clara, Calf., on Sunday, May 12, 2019.
+		Subject: Megan Rapinoe ; Object: Calf. ;
+		Adding to set of extracted relations
+		================
+
+		=== Extracted Relation ===
+		Sentence: U.S. women's national team winger Megan Rapino grew up in Redding.
+		Subject: Megan Rapino ; Object: Redding ;
+		Adding to set of extracted relations
+		================
+
+	Processed 30 / 57 sentences
+		=== Extracted Relation ===
+		Sentence: Rapinoe grew up in Redding.
+		Subject: Rapinoe ; Object: Redding ;
+		Adding to set of extracted relations
+		================
+
+		=== Extracted Relation ===
+		Sentence: Rapinoe grew up in Redding.
+		Subject: Rapinoe ; Object: Redding ;
+		Duplicate. Ignoring this.
+		================
+
+	Processed 35 / 57 sentences
+		=== Extracted Relation ===
+		Sentence: (Anda Chu/Bay Area News Group)Joanne Rice, left, and Noralene, who did not wish to give her last, both of Redding, attend the Redding Freedom Festival Fourth of July celebration at the Redding Civic Auditorium in Redding, Calif., on Thursday, July 4, 2019.
+		Subject: Joanne Rice ; Object: Redding ;
+		Adding to set of extracted relations
+		================
+
+		=== Extracted Relation ===
+		Sentence: (Anda Chu/Bay Area News Group)Joanne Rice, left, and Noralene, who did not wish to give her last, both of Redding, attend the Redding Freedom Festival Fourth of July celebration at the Redding Civic Auditorium in Redding, Calif., on Thursday, July 4, 2019.
+		Subject: Noralene ; Object: Redding ;
+		Adding to set of extracted relations
+		================
+
+	Processed 40 / 57 sentences
+	Processed 45 / 57 sentences
+		=== Extracted Relation ===
+		Sentence: Rapinoe grew up in Redding.
+		Subject: Rapinoe ; Object: Redding ;
+		Duplicate. Ignoring this.
+		================
+
+	Processed 50 / 57 sentences
+	Processed 55 / 57 sentences
+
+
+	Extracted annotations for  9  out of total  57  sentences
+	Relations extracted from this website: 11 (Overall: 16)
+
+
+================== ALL RELATIONS for Live_In ( 11 ) =================
+Subject: Joanne Rice	| Object: Redding
+Subject: Noralene	| Object: Redding
+Subject: Megan Rapinoe	| Object: Santa Clara
+Subject: Megan Rapinoe	| Object: Calf.
+Subject: Megan Rapinoe	| Object: United States
+Subject: Megan Rapino	| Object: Redding
+Subject: Megan Rapinoe	| Object: Bay Area
+Subject: Samantha Mewis	| Object: United States
+Subject: Megan Rapinoe	| Object: Redding
+Subject: Rapinoe	| Object: Redding
+Subject: Samantha Mewis	| Object: Bay Area
+Total # of iterations = 1

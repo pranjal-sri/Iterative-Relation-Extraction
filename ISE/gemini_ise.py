@@ -4,61 +4,23 @@ import ast
 
 from .base_ise import BaseISE
 from .utils import RELATIONS_DICT, RELEVANT_ENTITIES
-
-EXAMPLES = {
-
-1: ("Google co - founder Sergey Brin co - founded web - search giant Google Inc. in 1998 with fellow Stanford student Larry Page .", 
-    '[("Pichai", "Google"), ("Larry Page", "Google")]'),
-2: ("Pichai was selected to become the next CEO of Google on August 10 , 2015 , after previously being appointed Product Chief by the then CEO Larry Page .",
-'[("Pichai", "Google"), ("Larry Page", "Google")]'),
-3: ("'Sarah has a degree in journalism and resides in New York City .'",
-    '[("Sarah","New York City"),]'), 
-4: ("He is the executive chairman and CEO of Microsoft , succeeding Steve Ballmer in 2014 as CEO[2][3]",
-'[("Microsoft","Steve Ballmer")]')
-}
-
+from .prompt_templates import PROMPT_TEMPLATES
 
 def generate_prompt_template(relation_instruction):
-    en1, *en2 = RELEVANT_ENTITIES[relation_instruction]
-    # print(en1, en2)
-    entity_form = f'{en1}, {"/".join(en2)}'
-    # print(entity_form)
-
-    relation = RELATIONS_DICT[relation_instruction]
-
-    example_sentence, example_output = EXAMPLES[relation_instruction]
-    # print(relation)
-    template = f'''
-You act like a computer function that predicts relations within text. 
-I will give you a sentence, and you have to do the two step process:
-
-1)Consider list of all pairs of named entities of the form: {entity_form}
-2) Return the pairs that confirm to the relation: '{relation}'.  
-
-Be sure to consider all pairs of named entities of the given form. Print analysis as well as output like a python list of tuples in plain text shown below:
-
-Example:
-input sentences is 
-"{example_sentence}"
-
-You print:
-
-<Analysis>
-
-Output: 
-{example_output}
-
-
-The sentence is: "{{sentence}}"
-''' 
+    template = PROMPT_TEMPLATES[relation_instruction]
     return template
 
 def parse_gemini_output(output):
     # print("OUTPUT:" + output)
     output_line = output.strip(" \n").split('\n')[-1]
     # print("OUTPUT_LINE:"+output_line)
-    tuple_list = ast.literal_eval(output_line.strip())
-    return tuple_list
+
+    try:
+        tuple_list = ast.literal_eval(output_line.strip())
+        return tuple_list
+    except: 
+        return []
+    
 
 
 
@@ -66,6 +28,7 @@ class GeminiISE(BaseISE):
     def __init__(self, GOOGLE_API_KEY, ENGINE_ID, GEMINI_ID):
         super().__init__(GOOGLE_API_KEY, ENGINE_ID, GEMINI_ID) 
         genai.configure(api_key=GEMINI_ID)
+        self.sentences_sent_to_gem = []
 
 
     def get_gemini_completion(self, prompt, max_tokens = 1000, temperature = 2, top_p = 0.4, top_k=32):
@@ -87,8 +50,9 @@ class GeminiISE(BaseISE):
         return response.text
 
     def filter_entityblocks(self, entity_blocks, relation_instruction, sentence):
-        prompt = generate_prompt_template(relation_instruction).format(sentence = sentence)
-        # Recives a list of candidate entities and filters them
+        self.sentences_sent_to_gem.append(sentence)
+        prompt = generate_prompt_template(relation_instruction).format(input_sentence = sentence)
+        # Receives a list of candidate entities and filters them
         gemini_output = self.get_gemini_completion(prompt)
         related_entities = parse_gemini_output(gemini_output)
         
@@ -111,7 +75,7 @@ class GeminiISE(BaseISE):
 
             self.level_log('=== Extracted Relation ===', level =2) 
             self.level_log(f'Sentence: {sentence}', level = 2)
-            self.level_log(f'Prompt: {prompt}')
+            # self.level_log(f'Prompt: {prompt}')
             self.level_log(f'Subject: {sub} ; Object: {obj} ;', level = 2)
             if STATE == DUPLICATE:
                 self.level_log('Duplicate. Ignoring this.', level = 2)
@@ -176,4 +140,8 @@ class GeminiISE(BaseISE):
                 if len(self.X)>= k: break
 
             self.log_relations(relation_instruction,  self.X, iteration)
+
+        with open(f'gemini_sentences_rel_{relation_instruction}.txt', 'w') as f_g:
+            for sent in self.sentences_sent_to_gem:
+                print(str(sent), file=f_g)
         
