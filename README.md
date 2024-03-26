@@ -2,36 +2,64 @@
 
 ## Team Members:
 
-- Your Name (Your Columbia UNI)
-- Teammate's Name (Teammate's Columbia UNI)
+- Pranjal Srivastava (ps3392)
+- Shreyas Chatterjee (sc5290)
 
 ## Submitted Files:
 
-- `ise.py`: Main entry point script for the Information Extraction System.
-- `spanbert_ise.py`: Python script for information extraction using SpanBERT model.
-- `gemini_ise.py`: Python script for information extraction using Google Gemini API.
-- `base_ise.py`: Python script containing the base class for information extraction system.
-- `utils.py`: Python script containing utility functions and constants used in information extraction.
-- `prompt_templates.py`: Python script containing prompt templates for Gemini API.
+- `project2.py`: Main entry point script for the Information Extraction System.
+- `ISE/spanbert_ise.py`: Python script for information extraction using SpanBERT model.
+- `ISE/gemini_ise.py`: Python script for information extraction using Google Gemini API.
+- `ISE/base_ise.py`: Python script containing the base class for information extraction system.
+- `ISE/utils.py`: Python script containing utility functions and constants used in information extraction.
 - `README.txt`: This README file.
 - `QueryManager/__init__.py` : Initialization file for the QueryManager package.
 - `QueryManager/query_manager.py`: Python script containing the QueryManager class for querying search results.
+- `requirements.txt` : Mentions all the libraries and packages that need to be installed
+
+## Folder Structure:
+
+- Main Folder - Iterative Relation Extraction
+    - ISE Folder
+        - __init__.py
+        - base_ise.py
+        - gemini_ise.py
+        - spanbert_ise.py
+        - utils.py
+    - Query Manager Folder
+        - __init__.py
+        - query_manager.py
+    - SpanBERT Folder (imported)
+    - project2.py (main file)
+    - README.md
+    - requirements.txt
 
 ## Running the Program:
 
 To run the program, follow these steps:
 
-1. Ensure you have Python installed on your system.
+1. Set up the system like mentioned in the project description (python environment and apt-get package error)
+2. Make sure that the environment is activated and navigate to inside the main folder
 2. Install the required libraries and dependencies:
     ```bash
-    pip install spacy requests beautifulsoup4
+    pip install -r requirements.txt
     ```
-3. Set up a Google Custom Search Engine and obtain the JSON API Key and Engine ID.
-4. Clone the project repository to your local machine.
-5. Replace the placeholders `GOOGLE_API_KEY` and `ENGINE_ID` in the scripts `spanbert_ise.py` and `gemini_ise.py` with your actual Google API Key and Engine ID.
-6. Execute the main entry point script `ise.py` using Python:
+3. When inside the main folder run the following-
     ```bash
-    python ise.py
+    git clone https://github.com/larakaracasu/SpanBERT
+    cd SpanBERT
+    pip3 install -r requirements.txt
+    bash download_finetuned.sh
+    ```
+4. In SpanBERT/spanbert.py, change the imports to 'from SpanBERT.pytorch_pretrained_bert.modeling' and 'from SpanBERT.pytorch_pretrained_bert.tokenization', i.e., the code should look like-
+    ```bash
+    #from transformers import AutoTokenizer, AutoModel, BertForSequenceClassification
+    from SpanBERT.pytorch_pretrained_bert.modeling import BertForSequenceClassification
+    from SpanBERT.pytorch_pretrained_bert.tokenization import BertTokenizer
+    ```
+6. Execute the main entry point script `project2.py` using Python:
+    ```bash
+    python3 project2.py [-spanbert|-gemini] <google api key> <google engine id> <google gemini api key> <r> <t> <q> <k>
     ```
 
 ## External Libraries Used:
@@ -45,7 +73,7 @@ To run the program, follow these steps:
 
 ## Internal Design:
 
-- `ise.py`: Main entry point for the Information Extraction System. Orchestrates the execution of SpanBERT and Gemini information extraction scripts.
+- `project2.py`: Main entry point for the Information Extraction System. Orchestrates the execution of SpanBERT and Gemini information extraction scripts.
 - `spanbert_ise.py`: Implements information extraction using the SpanBERT model. It contains a class `SpanBertISE` which inherits from `BaseISE`.
 - `gemini_ise.py`: Implements information extraction using the Google Gemini API. It contains a class `GeminiISE` which inherits from `BaseISE`.
 - `base_ise.py`: Contains the base class `BaseISE` for information extraction system.
