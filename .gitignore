@@ -22,3 +22,5 @@ rad.json
 TestResults.xml
 
 __pycache__
+
+SpanBERT/pretrained_spanbert/

@@ -11,13 +11,13 @@ You are a computer function which performs relation extraction on a given senten
 
 Here is a description of each relation type.
 
-Relation 1 - Schools_Attended: Subject: PERSON, Object: ORGANIZATION, Description: Any school (college, high school, university, etc.) that the assigned person has attended. The mentioned person has attended any educational organization (school, college, high school, university etc.)
+Relation 1 - Schools_Attended: Subject: PERSON, Object: ORGANIZATION, Description: Any school (college, high school, university, etc.) that the assigned person has attended. The mentioned person(subject) has attended any educational organization(object) such as a school, college, high school, university etc.
 
-Relation 2 - Work_For: Subject: PERSON, Object: ORGANIZATION, Description: The mentioned person has been an employee or member of the organization or entity (corporate, educational, political etc.)
+Relation 2 - Work_For: Subject: PERSON, Object: ORGANIZATION, Description: The mentioned person(subject) has been an employee or member of the organization or entity (object) which can be corporate, educational, political etc.
 
-Relation 3 - Live_In: Subject: PERSON, Object: LOCATION or CITY or COUNTRY or STATE_OR_PROVINCE, Description: The mentioned person lives or lived in the geographical entity or area which can be a village or town or city or state or province or country. The object must be filled with a name of the geographical entity.
+Relation 3 - Live_In: Subject: PERSON, Object: LOCATION or CITY or COUNTRY or STATE_OR_PROVINCE, Description: The mentioned person(subject) lives or lived in the geographical entity or area (object) which can be a village or town or city or state or province or country. The object must be filled with a name of the geographical entity.
 
-Relation 4 - Top_Member_Employees: Subject: ORGANIZATION, Object: PERSON, Description: The mentioned organization has the mentioned person in a high-level or leading or founding role.
+Relation 4 - Top_Member_Employees: Subject: ORGANIZATION, Object: PERSON, Description: The mentioned organization(subject) has the mentioned person(object) in a high-level or leading or founding role.
 
 Also here are some examples of entity pairs and corresponsing relation tuples in the form of [subject, relation, object].
 ["Jeff Bezos", "Schools_Attended", "Princeton University"]
@@ -30,7 +30,7 @@ The text is scraped from websites, so it may be irregular and incorrect. So, be 
 Make sure that the entities you extract are proper nouns and do not fall in the category of pronouns like I, we, he, she, they etc.
 
 ⁠Extract temporal information if the task requires identifying if the relation is valid for the subject and the object over a specific time period.
-                    
+
 Now, we are ONLY interested in the relation {RELATIONS_DICT[relation_instruction]}. Given a sentence, return all extracted relations of the interest as a list of tuples of (subject, relation, object) if you find any.
                     
 Input Sentence: {{input_sentence}}

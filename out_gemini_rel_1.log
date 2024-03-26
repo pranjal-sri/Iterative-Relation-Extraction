@@ -34,20 +34,8 @@ URL (1 / 10): https://engineering.stanford.edu/about/heroes/2014-heroes/sergey-b
 		================
 
 		=== Extracted Relation ===
-		Sentence: Secondary Navigation Dean Dean’s Office Diversity, Equity and Inclusion Visit History Persis S. Drell Heroes 2019 Heroes 2018 Heroes 2016 Heroes 2015 Heroes 2014 Heroes Kenneth Arrow Sergey Brin Irmgard Flugge-Lotz Edward Ginzton Larry Page Sally Ride 2013 Heroes 2012 Heroes 2011 Heroes SoE-Future Main content start Sergey Brin — Google co-founder Sergey Brin co-founded web-search giant Google Inc. in 1998 with fellow Stanford student Larry Page.
-		Subject: Larry Page ; Object: Stanford ;
-		Adding to set of extracted relations
-		================
-
-		=== Extracted Relation ===
 		Sentence: Brin earned his master’s degree in computer science at Stanford, where he and Page developed the “PageRank” algorithm, which calculated the relevance of a web page to the user’s query based in part on the number of other pages that linked to it.
 		Subject: Brin ; Object: Stanford ;
-		Adding to set of extracted relations
-		================
-
-		=== Extracted Relation ===
-		Sentence: Brin earned his master’s degree in computer science at Stanford, where he and Page developed the “PageRank” algorithm, which calculated the relevance of a web page to the user’s query based in part on the number of other pages that linked to it.
-		Subject: Page ; Object: Stanford ;
 		Adding to set of extracted relations
 		================
 
@@ -57,7 +45,7 @@ URL (1 / 10): https://engineering.stanford.edu/about/heroes/2014-heroes/sergey-b
 
 
 	Extracted annotations for  3  out of total  38  sentences
-	Relations extracted from this website: 5 (Overall: 5)
+	Relations extracted from this website: 3 (Overall: 3)
 
 
 URL (2 / 10): http://infolab.stanford.edu/~sergey/
@@ -90,21 +78,21 @@ URL (2 / 10): http://infolab.stanford.edu/~sergey/
 
 URL (3 / 10): https://en.wikipedia.org/wiki/Sergey_Brin
 	Fetching text from url...
-	trimming webpage length from 39159 to 10000
+	trimming webpage length from 39220 to 10000
 	Webpage length (num characters): 10000
 	Annotating the webpage using spacy ...
 	Extracted 73 sentences. Processing each sentence one by one to check for presence of right pair of named entity types; if so, will run the second pipeline ...
 	Processed 5 / 73 sentences
 	Processed 10 / 73 sentences
 		=== Extracted Relation ===
-		Sentence: Sergey Mikhailovich Brin (Russian: Сергей Михайлович Брин; born August 21, 1973) is an American businessman best known for co-founding Google with Larry Page.
-		Subject: Sergey Mikhailovich Brin ; Object: Google ;
+		Sentence: Sergey BrinСергей БринBrin in 2010BornSergey Mikhailovich Brin (1973-08-21) August 21, 1973 (age 50)Moscow, Russian SFSR, Soviet UnionNationalityAmericanEducation University of Maryland, College Park (BS) Stanford University (MS) OccupationsBusinessmancomputer scientistOrganizationsGoogleAlphabet, Inc.Known for Co-founding Google Co-founding Alphabet Inc.
+		Subject: Sergey Brin ; Object: University of Maryland, College Park ;
 		Adding to set of extracted relations
 		================
 
 		=== Extracted Relation ===
-		Sentence: Sergey Mikhailovich Brin (Russian: Сергей Михайлович Брин; born August 21, 1973) is an American businessman best known for co-founding Google with Larry Page.
-		Subject: Larry Page ; Object: Google ;
+		Sentence: Sergey BrinСергей БринBrin in 2010BornSergey Mikhailovich Brin (1973-08-21) August 21, 1973 (age 50)Moscow, Russian SFSR, Soviet UnionNationalityAmericanEducation University of Maryland, College Park (BS) Stanford University (MS) OccupationsBusinessmancomputer scientistOrganizationsGoogleAlphabet, Inc.Known for Co-founding Google Co-founding Alphabet Inc.
+		Subject: Sergey Brin ; Object: Stanford University ;
 		Adding to set of extracted relations
 		================
 
@@ -113,29 +101,29 @@ URL (3 / 10): https://en.wikipedia.org/wiki/Sergey_Brin
 	Processed 25 / 73 sentences
 		=== Extracted Relation ===
 		Sentence: Mikhail and Eugenia Brin, both graduates of Moscow State University (MSU).[7]
-		Subject: Mikhail Brin ; Object: Moscow State University (MSU) ;
+		Subject: Mikhail Brin ; Object: Moscow State University ;
 		Adding to set of extracted relations
 		================
 
 		=== Extracted Relation ===
 		Sentence: Mikhail and Eugenia Brin, both graduates of Moscow State University (MSU).[7]
-		Subject: Eugenia Brin ; Object: Moscow State University (MSU) ;
+		Subject: Eugenia Brin ; Object: Moscow State University ;
 		Adding to set of extracted relations
 		================
 
 	Processed 30 / 73 sentences
+		=== Extracted Relation ===
+		Sentence: The Brin family lived in Vienna and Paris while Mikhail Brin secured a teaching position at the University of Maryland with help from Anatole Katok.
+		Subject: Mikhail Brin ; Object: University of Maryland ;
+		Adding to set of extracted relations
+		================
+
 	Processed 35 / 73 sentences
 	Processed 40 / 73 sentences
 		=== Extracted Relation ===
 		Sentence: Search engine development[edit] Left to right, Eric Schmidt, Sergey Brin and Larry Page, 2008 During an orientation for new students at Stanford, he met Larry Page.
-		Subject: Sergey Brin ; Object: Stanford ;
-		Duplicate. Ignoring this.
-		================
-
-		=== Extracted Relation ===
-		Sentence: Search engine development[edit] Left to right, Eric Schmidt, Sergey Brin and Larry Page, 2008 During an orientation for new students at Stanford, he met Larry Page.
 		Subject: Larry Page ; Object: Stanford ;
-		Duplicate. Ignoring this.
+		Adding to set of extracted relations
 		================
 
 	Processed 45 / 73 sentences
@@ -146,8 +134,8 @@ URL (3 / 10): https://en.wikipedia.org/wiki/Sergey_Brin
 	Processed 70 / 73 sentences
 
 
-	Extracted annotations for  3  out of total  73  sentences
-	Relations extracted from this website: 4 (Overall: 6)
+	Extracted annotations for  4  out of total  73  sentences
+	Relations extracted from this website: 6 (Overall: 6)
 
 
 URL (4 / 10): https://www.quora.com/What-was-it-like-to-be-at-Stanford-with-Sergey-Brin-and-Larry-Page
@@ -220,44 +208,6 @@ URL (5 / 10): https://snap.stanford.edu/class/cs224w-readings/Brin98Anatomy.pdf
 
 URL (6 / 10): https://news.stanford.edu/2022/08/05/wastewaterscan-will-monitor-wastewater-covid-19-monkeypox-diseases/
 	Fetching text from url...
-	Webpage length (num characters): 7453
+	Webpage length (num characters): 7484
 	Annotating the webpage using spacy ...
 	Extracted 38 sentences. Processing each sentence one by one to check for presence of right pair of named entity types; if so, will run the second pipeline ...
-	Processed 5 / 38 sentences
-		=== Extracted Relation ===
-		Sentence: Stanford undergraduate Julia Simon collects wastewater from the Codiga Resource Recovery Center on the Stanford campus for analysis.
-		Subject: Julia Simon ; Object: Stanford ;
-		Adding to set of extracted relations
-		================
-
-	Processed 10 / 38 sentences
-		=== Extracted Relation ===
-		Sentence: We’ve seen how valuable this can be as individual testing practices for SARS-CoV-2 have changed,” said Alexandria Boehm, professor of civil and environmental engineering at Stanford.
-		Subject: Alexandria Boehm ; Object: Stanford ;
-		Adding to set of extracted relations
-		================
-
-	Processed 15 / 38 sentences
-	Processed 20 / 38 sentences
-	Processed 25 / 38 sentences
-	Processed 30 / 38 sentences
-	Processed 35 / 38 sentences
-
-
-	Extracted annotations for  2  out of total  38  sentences
-	Relations extracted from this website: 2 (Overall: 2)
-
-
-================== ALL RELATIONS for Schools_Attended ( 11 ) =================
-Subject: Julia Simon	| Object: Stanford
-Subject: Larry Page	| Object: Google
-Subject: Alexandria Boehm	| Object: Stanford
-Subject: Page	| Object: Stanford
-Subject: Mikhail Brin	| Object: Moscow State University (MSU)
-Subject: Larry Page	| Object: Stanford
-Subject: Sergey Brin	| Object: Stanford
-Subject: Brin	| Object: Stanford
-Subject: Eugenia Brin	| Object: Moscow State University (MSU)
-Subject: Sergey Brin	| Object: Stanford University School of Engineering
-Subject: Sergey Mikhailovich Brin	| Object: Google
-Total # of iterations = 1

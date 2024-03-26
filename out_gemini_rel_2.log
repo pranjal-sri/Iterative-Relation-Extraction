@@ -8,151 +8,217 @@ Gemini key   = AIzaSyCb33bJ89z6RxiXUmce0_zU2BLfJ_J9Ym4
 Method       = gemini
 Relation     = Work_For
 Threshold    = 0.7
-Query        = sundar pichai google
-# of Tuples  = 40
+Query        = bill gates microsoft
+# of Tuples  = 10
 Loading necessary libraries; This should take a minute or so ...)
-=========== Iteration: 1 - Query: sundar pichai google ===========
-URL (1 / 10): https://en.wikipedia.org/wiki/Sundar_Pichai
+=========== Iteration: 1 - Query: bill gates microsoft ===========
+URL (1 / 10): https://en.wikipedia.org/wiki/Bill_Gates
 	Fetching text from url...
-	trimming webpage length from 34144 to 10000
+	trimming webpage length from 142953 to 10000
 	Webpage length (num characters): 10000
 	Annotating the webpage using spacy ...
-	Extracted 105 sentences. Processing each sentence one by one to check for presence of right pair of named entity types; if so, will run the second pipeline ...
-	Processed 5 / 105 sentences
-	Processed 10 / 105 sentences
-	Processed 15 / 105 sentences
+	Extracted 51 sentences. Processing each sentence one by one to check for presence of right pair of named entity types; if so, will run the second pipeline ...
+	Processed 5 / 51 sentences
+	Processed 10 / 51 sentences
 		=== Extracted Relation ===
-		Sentence: Pichai was selected to become the next CEO of Google on August 10, 2015, after previously being appointed Product Chief by the then CEO Larry Page.
-		Subject: Pichai ; Object: Google ;
+		Sentence: Bill GatesGates in 2023BornWilliam Henry Gates III (1955-10-28) October 28, 1955 (age 68)Seattle, Washington, U.S.EducationHarvard University (dropped out)OccupationsBusinessmaninvestorphilanthropistwriterYears active1972–presentKnown for Pioneer of the personal computer revolution with Paul Allen Co-founding of Microsoft and Bill & Melinda Gates
+		Subject: Bill Gates ; Object: Microsoft ;
+		Adding to set of extracted relations
+		================
+
+	Processed 15 / 51 sentences
+		=== Extracted Relation ===
+		Sentence: The Giving Pledge OER Project Breakthrough Energy Mission Innovation Writings "An Open Letter to Hobbyists" The Road Ahead Business @ the Speed of Thought How to Avoid a Climate Disaster How to Prevent the Next Pandemic Related Bill Gates' flower fly Codex Leicester Lost on the Grand Banks History of Microsoft Timeline of Microsoft Paul Allen vte William Henry Gates III (born October 28, 1955) is an American businessman, investor, philanthropist, and writer best known for co-founding the software giant Microsoft, along with his childhood friend Paul Allen.
+		Subject: William Henry Gates III ; Object: Microsoft ;
+		Adding to set of extracted relations
+		================
+
+	Processed 20 / 51 sentences
+		=== Extracted Relation ===
+		Sentence: In 1975, he and Allen founded Microsoft in Albuquerque, New Mexico.
+		Subject: Allen ; Object: Microsoft ;
 		Adding to set of extracted relations
 		================
 
 		=== Extracted Relation ===
-		Sentence: Pichai was selected to become the next CEO of Google on August 10, 2015, after previously being appointed Product Chief by the then CEO Larry Page.
-		Subject: Larry Page ; Object: Google ;
+		Sentence: In 1975, he and Allen founded Microsoft in Albuquerque, New Mexico.
+		Subject: he ; Object: Microsoft ;
 		Adding to set of extracted relations
 		================
 
-	Processed 20 / 105 sentences
+	Processed 25 / 51 sentences
 		=== Extracted Relation ===
-		Sentence: His mother, Lakshmi, was a stenographer, and his father, Regunatha Pichai, was an electrical engineer at GEC, the British conglomerate.[17][18] Pichai completed schooling in Jawahar Vidyalaya Senior Secondary School[19] in Ashok Nagar, Chennai and completed the Class XII from Vana Vani school at IIT Madras.[20][21]
-		Subject: Regunatha Pichai ; Object: GEC ;
-		Adding to set of extracted relations
-		================
-
-		=== Extracted Relation ===
-		Sentence: Career Pichai speaking at the 2015 Mobile World Congress in Barcelona, Spain Pichai worked in engineering and product management at Applied Materials and in management consulting at McKinsey & Company.[26]
-		Subject: Pichai ; Object: Applied Materials ;
+		Sentence: In June 2008, Gates transitioned into a part-time role at Microsoft and full-time work at the Bill & Melinda Gates Foundation, the private charitable foundation he and his then-wife Melinda had established in 2000.[6]
+		Subject: Gates ; Object: Microsoft ;
 		Adding to set of extracted relations
 		================
 
 		=== Extracted Relation ===
-		Sentence: Career Pichai speaking at the 2015 Mobile World Congress in Barcelona, Spain Pichai worked in engineering and product management at Applied Materials and in management consulting at McKinsey & Company.[26]
-		Subject: Pichai ; Object: McKinsey & Company ;
-		Adding to set of extracted relations
-		================
-
-	Processed 25 / 105 sentences
-	Processed 30 / 105 sentences
-		=== Extracted Relation ===
-		Sentence: Android was formerly managed by Andy Rubin,[32] who was a director of Jive Software from April 2011 to July 30, 2013.[33][34][35]
-		Subject: Andy Rubin ; Object: Jive Software ;
+		Sentence: In June 2008, Gates transitioned into a part-time role at Microsoft and full-time work at the Bill & Melinda Gates Foundation, the private charitable foundation he and his then-wife Melinda had established in 2000.[6]
+		Subject: Gates ; Object: Bill & Melinda Gates Foundation ;
 		Adding to set of extracted relations
 		================
 
 		=== Extracted Relation ===
-		Sentence: Pichai was selected to become the next CEO of Google on August 10, 2015,[36] after previously being appointed Product Chief by CEO, Larry Page.
-		Subject: Pichai ; Object: Google ;
+		Sentence: He stepped down as chairman of the Microsoft board in February 2014 and assumed the role of technology adviser to support newly appointed CEO Satya Nadella.[7]
+		Subject: Satya Nadella ; Object: Microsoft ;
+		Adding to set of extracted relations
+		================
+
+		=== Extracted Relation ===
+		Sentence: In March 2020, Gates left his board positions at Microsoft and Berkshire Hathaway to focus on his philanthropic efforts on climate change, global health and development, and education.[8] Since 1987, Gates has been included in the Forbes list of the world's billionaires.
+		Subject: Gates ; Object: Microsoft ;
 		Duplicate. Ignoring this.
 		================
 
 		=== Extracted Relation ===
-		Sentence: Pichai was selected to become the next CEO of Google on August 10, 2015,[36] after previously being appointed Product Chief by CEO, Larry Page.
-		Subject: Larry Page ; Object: Google ;
-		Duplicate. Ignoring this.
-		================
-
-	Processed 35 / 105 sentences
-		=== Extracted Relation ===
-		Sentence: In December 2017, Pichai was a speaker at the World Internet Conference in China, where he stated that "a lot of work Google does is to help Chinese companies.
-		Subject: Pichai ; Object: Google ;
-		Duplicate. Ignoring this.
-		================
-
-		=== Extracted Relation ===
-		Sentence: In December 2019, Pichai became the CEO of Alphabet Inc.[47][48]
-		Subject: Pichai ; Object: Alphabet Inc. ;
+		Sentence: In March 2020, Gates left his board positions at Microsoft and Berkshire Hathaway to focus on his philanthropic efforts on climate change, global health and development, and education.[8] Since 1987, Gates has been included in the Forbes list of the world's billionaires.
+		Subject: Gates ; Object: Berkshire Hathaway ;
 		Adding to set of extracted relations
 		================
 
-	Processed 40 / 105 sentences
+	Processed 30 / 51 sentences
+	Processed 35 / 51 sentences
+	Processed 40 / 51 sentences
+	Processed 45 / 51 sentences
 		=== Extracted Relation ===
-		Sentence: In October 2020, the United States Senate Committee on Commerce, Science, and Transportation unanimously voted in favor of, and on a bipartisan basis, to subpoena Pichai, along with Facebook (today Meta) CEO Mark Zuckerberg and then Twitter CEO Jack Dorsey, to testify before the committee in response to lawmakers' concerns over the technology industry's exemption from Section 230 of the Communications Decency Act of 1934.[53] Awards and recognition In 2022, Pichai received the Padma Bhushan in the category of Trade and Industry[54] from the Government of India, the country's third-highest civilian award.[55][56]
-		Subject: Pichai ; Object: Google ;
-		Duplicate. Ignoring this.
-		================
-
-		=== Extracted Relation ===
-		Sentence: In October 2020, the United States Senate Committee on Commerce, Science, and Transportation unanimously voted in favor of, and on a bipartisan basis, to subpoena Pichai, along with Facebook (today Meta) CEO Mark Zuckerberg and then Twitter CEO Jack Dorsey, to testify before the committee in response to lawmakers' concerns over the technology industry's exemption from Section 230 of the Communications Decency Act of 1934.[53] Awards and recognition In 2022, Pichai received the Padma Bhushan in the category of Trade and Industry[54] from the Government of India, the country's third-highest civilian award.[55][56]
-		Subject: Mark Zuckerberg ; Object: Facebook ;
+		Sentence: The family encouraged competition; one visitor reported that "it didn't matter whether it was hearts or pickleball or swimming to the dock; there was always a reward for winning and there was always a penalty for losing".[23] Gates (right) with Paul Allen seated at Teletype Model 33 ASR terminals in Lakeside School, 1970 At age 13, he enrolled in the private Lakeside prep school,[24][25] where he wrote his first software program.[26]
+		Subject: Gates ; Object: Lakeside School ;
 		Adding to set of extracted relations
 		================
 
-		=== Extracted Relation ===
-		Sentence: In October 2020, the United States Senate Committee on Commerce, Science, and Transportation unanimously voted in favor of, and on a bipartisan basis, to subpoena Pichai, along with Facebook (today Meta) CEO Mark Zuckerberg and then Twitter CEO Jack Dorsey, to testify before the committee in response to lawmakers' concerns over the technology industry's exemption from Section 230 of the Communications Decency Act of 1934.[53] Awards and recognition In 2022, Pichai received the Padma Bhushan in the category of Trade and Industry[54] from the Government of India, the country's third-highest civilian award.[55][56]
-		Subject: Jack Dorsey ; Object: Twitter ;
-		Adding to set of extracted relations
-		================
-
-	Processed 45 / 105 sentences
-	Processed 50 / 105 sentences
-	Processed 55 / 105 sentences
-	Processed 60 / 105 sentences
-	Processed 65 / 105 sentences
-	Processed 70 / 105 sentences
-		=== Extracted Relation ===
-		Sentence: "Sundar Pichai, in full Pichai Sundararajan, (born June 10, 1972, Madras [now Chennai], Tamil Nadu, India), Indian-born American executive who was CEO of both Google, Inc. (2015– ), and its holding company, Alphabet Inc. (2019– )."
-		Subject: Sundar Pichai ; Object: Google, Inc. ;
-		Adding to set of extracted relations
-		================
-
-		=== Extracted Relation ===
-		Sentence: "Sundar Pichai, in full Pichai Sundararajan, (born June 10, 1972, Madras [now Chennai], Tamil Nadu, India), Indian-born American executive who was CEO of both Google, Inc. (2015– ), and its holding company, Alphabet Inc. (2019– )."
-		Subject: Sundar Pichai ; Object: Alphabet Inc. ;
-		Adding to set of extracted relations
-		================
-
-	Processed 75 / 105 sentences
-	Processed 80 / 105 sentences
-	Processed 85 / 105 sentences
-	Processed 90 / 105 sentences
-	Processed 95 / 105 sentences
-	Processed 100 / 105 sentences
-	Processed 105 / 105 sentences
+	Processed 50 / 51 sentences
 
 
-	Extracted annotations for  9  out of total  105  sentences
-	Relations extracted from this website: 11 (Overall: 15)
+	Extracted annotations for  7  out of total  51  sentences
+	Relations extracted from this website: 9 (Overall: 10)
 
 
-URL (2 / 10): https://blog.google/authors/sundar-pichai/
+URL (2 / 10): https://twitter.com/BillGates
 	Fetching text from url...
-	Webpage length (num characters): 3689
+	Failed to retrieve content from URL: https://twitter.com/BillGates. Status code: 400
+	Skipping the URL as no text was extracted
+URL (3 / 10): https://www.instagram.com/thisisbillgates/?hl=en
+	Fetching text from url...
+	Failed to retrieve content from URL: https://www.instagram.com/thisisbillgates/?hl=en. Status code: 429
+	Skipping the URL as no text was extracted
+URL (4 / 10): https://news.microsoft.com/tag/bill-gates/
+	Fetching text from url...
+	Failed to retrieve content from URL: https://news.microsoft.com/tag/bill-gates/. Status code: 403
+	Skipping the URL as no text was extracted
+URL (5 / 10): https://www.britannica.com/biography/Bill-Gates
+	Fetching text from url...
+	trimming webpage length from 12497 to 10000
+	Webpage length (num characters): 10000
 	Annotating the webpage using spacy ...
-	Extracted 24 sentences. Processing each sentence one by one to check for presence of right pair of named entity types; if so, will run the second pipeline ...
-	Processed 5 / 24 sentences
-	Processed 10 / 24 sentences
-	Processed 15 / 24 sentences
-	Processed 20 / 24 sentences
+	Extracted 62 sentences. Processing each sentence one by one to check for presence of right pair of named entity types; if so, will run the second pipeline ...
+	Processed 5 / 62 sentences
+	Processed 10 / 62 sentences
+	Processed 15 / 62 sentences
+	Processed 20 / 62 sentences
+	Processed 25 / 62 sentences
+	Processed 30 / 62 sentences
+	Processed 35 / 62 sentences
+	Processed 40 / 62 sentences
+		=== Extracted Relation ===
+		Sentence: Where did Bill Gates go to college?Bill Gates attended Harvard University.
+		Subject: Bill Gates ; Object: Harvard University ;
+		Adding to set of extracted relations
+		================
+
+		=== Extracted Relation ===
+		Sentence: What are Bill Gates’s major accomplishments?Bill Gates founded the software company Microsoft Corporation with his friend Paul Allen.
+		Subject: Bill Gates ; Object: Microsoft Corporation ;
+		Adding to set of extracted relations
+		================
+
+		=== Extracted Relation ===
+		Sentence: Bill Gates (born October 28, 1955, Seattle, Washington, U.S.) is an American computer programmer and entrepreneur who cofounded Microsoft Corporation, the world’s largest personal-computer software company.
+		Subject: Bill Gates ; Object: Microsoft Corporation ;
+		Duplicate. Ignoring this.
+		================
+
+	Processed 45 / 62 sentences
+		=== Extracted Relation ===
+		Sentence: In 1975 Gates, then a sophomore at Harvard University, joined his hometown friend Paul G. Allen to develop software for the first microcomputers.
+		Subject: Gates ; Object: Harvard University ;
+		Adding to set of extracted relations
+		================
+
+		=== Extracted Relation ===
+		Sentence: With the success of this project, Gates left Harvard during his junior year and, with Allen, formed Microsoft.
+		Subject: Gates ; Object: Microsoft ;
+		Duplicate. Ignoring this.
+		================
+
+	Processed 50 / 62 sentences
+	Processed 55 / 62 sentences
+	Processed 60 / 62 sentences
 
 
-	Extracted annotations for  0  out of total  24  sentences
-	Relations extracted from this website: 0 (Overall: 0)
+	Extracted annotations for  5  out of total  62  sentences
+	Relations extracted from this website: 3 (Overall: 5)
 
 
-URL (3 / 10): https://www.instagram.com/sundarpichai/?hl=en
+URL (6 / 10): https://www.linkedin.com/in/williamhgates
 	Fetching text from url...
-	Webpage length (num characters): 19
+	Failed to retrieve content from URL: https://www.linkedin.com/in/williamhgates. Status code: 999
+	Skipping the URL as no text was extracted
+URL (7 / 10): https://www.hindustantimes.com/business/who-is-bill-gates-girlfriend-paula-hurd-with-whom-he-attended-anant-ambani-radhika-merchant-pre-wedding-celebrations-101709711700593.html
+	Fetching text from url...
+	Failed to retrieve content from URL: https://www.hindustantimes.com/business/who-is-bill-gates-girlfriend-paula-hurd-with-whom-he-attended-anant-ambani-radhika-merchant-pre-wedding-celebrations-101709711700593.html. Status code: 401
+	Skipping the URL as no text was extracted
+URL (8 / 10): https://www.forbes.com/profile/bill-gates/
+	Fetching text from url...
+	Webpage length (num characters): 7075
+	Annotating the webpage using spacy ...
+	Extracted 35 sentences. Processing each sentence one by one to check for presence of right pair of named entity types; if so, will run the second pipeline ...
+		=== Extracted Relation ===
+		Sentence: In PROFILEBill GatesCochair, Bill & Melinda Gates Foundation$130.8B$66M (0.05%)Real Time Net Worthas of 3/26/24Reflects change since 5 pm ET of prior trading day.#7 in the world todayPhoto
+		Subject: Bill Gates ; Object: Bill & Melinda Gates Foundation ;
+		Adding to set of extracted relations
+		================
+
+		=== Extracted Relation ===
+		Sentence: by John KeatleyAbout Bill GatesBill Gates turned his fortune from software firm Microsoft into diversified holdings including investments in zero-carbon energy companiesIn May 2021, Bill and Melinda Gates each announced on Twitter they were ending their marriage after 27 years.
+		Subject: Bill Gates ; Object: Microsoft ;
+		Duplicate. Ignoring this.
+		================
+
+	Processed 5 / 35 sentences
+		=== Extracted Relation ===
+		Sentence: Gates, who cofounded Microsoft with Paul Allen (d. 2018) in 1975, transferred at least $6 billion worth of shares in public companies to Melinda as part of the divorce settlement.
+		Subject: Gates ; Object: Microsoft ;
+		Duplicate. Ignoring this.
+		================
+
+	Processed 10 / 35 sentences
+		=== Extracted Relation ===
+		Sentence: Bill GatesRelated People & CompaniesWarren BuffettFriendView ProfileMicrosoftHolds stake in MicrosoftView ProfileHarvard UniversityAttended
+		Subject: Bill Gates ; Object: Microsoft ;
+		Duplicate. Ignoring this.
+		================
+
+	Processed 15 / 35 sentences
+	Processed 20 / 35 sentences
+		=== Extracted Relation ===
+		Sentence: Moses Preached The Power Of MathBill Gates, the Microsoft founder, is on a crusade to prioritize math.
+		Subject: Bill Gates ; Object: Microsoft ;
+		Duplicate. Ignoring this.
+		================
+
+	Processed 25 / 35 sentences
+	Processed 30 / 35 sentences
+	Processed 35 / 35 sentences
+
+
+	Extracted annotations for  5  out of total  35  sentences
+	Relations extracted from this website: 1 (Overall: 5)
+
+
+URL (9 / 10): https://answers.microsoft.com/en-us/outlook_com/forum/all/microsoft-and-bill-gates-are-so-damn-screwed-up/cd76d0e2-ece4-45db-8886-00d557d593e2
+	Fetching text from url...
+	Webpage length (num characters): 13
 	Annotating the webpage using spacy ...
 	Extracted 1 sentences. Processing each sentence one by one to check for presence of right pair of named entity types; if so, will run the second pipeline ...
 
@@ -161,765 +227,22 @@ URL (3 / 10): https://www.instagram.com/sundarpichai/?hl=en
 	Relations extracted from this website: 0 (Overall: 0)
 
 
-URL (4 / 10): https://www.businessinsider.com/calls-for-google-ceo-sundar-pichai-alphabet-step-down-ai-2024-3
+URL (10 / 10): https://www.gatesnotes.com/The-Age-of-AI-Has-Begun
 	Fetching text from url...
-	Webpage length (num characters): 8634
-	Annotating the webpage using spacy ...
-	Extracted 77 sentences. Processing each sentence one by one to check for presence of right pair of named entity types; if so, will run the second pipeline ...
-	Processed 5 / 77 sentences
-	Processed 10 / 77 sentences
-	Processed 15 / 77 sentences
-	Processed 20 / 77 sentences
-	Processed 25 / 77 sentences
-	Processed 30 / 77 sentences
-	Processed 35 / 77 sentences
-		=== Extracted Relation ===
-		Sentence: The slip-up was so bad it sent the company's stock tumbling and had Sundar Pichai, Google's CEO, address the troops, calling the situation "completely unacceptable.
-		Subject: Sundar Pichai ; Object: Google ;
-		Adding to set of extracted relations
-		================
-
-	Processed 40 / 77 sentences
-		=== Extracted Relation ===
-		Sentence: Advertisement Ben Thompson, an analyst and the author of the "Stratechery" newsletter, wrote this week that Google was in need of a transformation that would "mean removing those who let the former run amok, up to and including CEO Sundar Pichai."
-		Subject: Ben Thompson ; Object: Google ;
-		Adding to set of extracted relations
-		================
-
-		=== Extracted Relation ===
-		Sentence: Advertisement Ben Thompson, an analyst and the author of the "Stratechery" newsletter, wrote this week that Google was in need of a transformation that would "mean removing those who let the former run amok, up to and including CEO Sundar Pichai."
-		Subject: Sundar Pichai ; Object: Google ;
-		Duplicate. Ignoring this.
-		================
-
-	Processed 45 / 77 sentences
-		=== Extracted Relation ===
-		Sentence: Related stories Pichai, who was appointed CEO of Google in 2015 and Alphabet in 2019, has proven to be a strong peacetime CEO.
-		Subject: Pichai ; Object: Google ;
-		Duplicate. Ignoring this.
-		================
-
-		=== Extracted Relation ===
-		Sentence: Related stories Pichai, who was appointed CEO of Google in 2015 and Alphabet in 2019, has proven to be a strong peacetime CEO.
-		Subject: Pichai ; Object: Alphabet ;
-		Adding to set of extracted relations
-		================
-
-	Processed 50 / 77 sentences
-		=== Extracted Relation ===
-		Sentence: Aravind Srinivas — a founder and CEO of Perplexity, a former OpenAI researcher, and a former Google and DeepMind intern — also weighed in on the debate about Pichai's future this week and even theorized who might replace the CEO.
-		Subject: Aravind Srinivas ; Object: Perplexity ;
-		Adding to set of extracted relations
-		================
-
-		=== Extracted Relation ===
-		Sentence: Aravind Srinivas — a founder and CEO of Perplexity, a former OpenAI researcher, and a former Google and DeepMind intern — also weighed in on the debate about Pichai's future this week and even theorized who might replace the CEO.
-		Subject: Aravind Srinivas ; Object: OpenAI ;
-		Adding to set of extracted relations
-		================
-
-		=== Extracted Relation ===
-		Sentence: Aravind Srinivas — a founder and CEO of Perplexity, a former OpenAI researcher, and a former Google and DeepMind intern — also weighed in on the debate about Pichai's future this week and even theorized who might replace the CEO.
-		Subject: Aravind Srinivas ; Object: Google ;
-		Adding to set of extracted relations
-		================
-
-		=== Extracted Relation ===
-		Sentence: Aravind Srinivas — a founder and CEO of Perplexity, a former OpenAI researcher, and a former Google and DeepMind intern — also weighed in on the debate about Pichai's future this week and even theorized who might replace the CEO.
-		Subject: Aravind Srinivas ; Object: DeepMind ;
-		Adding to set of extracted relations
-		================
-
-	Processed 55 / 77 sentences
-		=== Extracted Relation ===
-		Sentence: Advertisement "Sundar is also the CEO of Alphabet, and he is best positioned to appoint the CEO of Google," whether that's someone new from outside the company, or an internal candidate, or "having himself continue," Srinivas wrote on X.Marissa has viewsEven Marissa Mayer, who was Google's 20th employee ever and worked there for 13 years, got involved in the debate.
-		Subject: Marissa Mayer ; Object: Google ;
-		Adding to set of extracted relations
-		================
-
-	Processed 60 / 77 sentences
-	Processed 65 / 77 sentences
-		=== Extracted Relation ===
-		Sentence: On February 28, Axel Springer, Business Insider's parent company, joined 31 other media groups and filed a $2.3 billion suit against Google in Dutch court, alleging losses suffered due to the company's advertising practices.
-		Subject: Axel Springer ; Object: Business Insider ;
-		Adding to set of extracted relations
-		================
-
-	Processed 70 / 77 sentences
-	Processed 75 / 77 sentences
-
-
-	Extracted annotations for  6  out of total  77  sentences
-	Relations extracted from this website: 9 (Overall: 11)
-
-
-URL (5 / 10): https://twitter.com/sundarpichai?lang=en
-	Fetching text from url...
-	Failed to retrieve content from URL: https://twitter.com/sundarpichai?lang=en. Status code: 400
+	Failed to retrieve content from URL: https://www.gatesnotes.com/The-Age-of-AI-Has-Begun. Status code: 403
 	Skipping the URL as no text was extracted
-URL (6 / 10): https://www.semafor.com/article/02/27/2024/google-ceo-sundar-pichai-calls-ai-tools-responses-completely-unacceptable
-	Fetching text from url...
-	Webpage length (num characters): 6012
-	Annotating the webpage using spacy ...
-	Extracted 53 sentences. Processing each sentence one by one to check for presence of right pair of named entity types; if so, will run the second pipeline ...
-	Processed 5 / 53 sentences
-	Processed 10 / 53 sentences
-	Processed 15 / 53 sentences
-	Processed 20 / 53 sentences
-	Processed 25 / 53 sentences
-	Processed 30 / 53 sentences
-	Processed 35 / 53 sentences
-	Processed 40 / 53 sentences
-	Processed 45 / 53 sentences
-	Processed 50 / 53 sentences
-
-
-	Extracted annotations for  0  out of total  53  sentences
-	Relations extracted from this website: 0 (Overall: 0)
-
-
-URL (7 / 10): https://www.britannica.com/biography/Sundar-Pichai
-	Fetching text from url...
-	Webpage length (num characters): 7033
-	Annotating the webpage using spacy ...
-	Extracted 48 sentences. Processing each sentence one by one to check for presence of right pair of named entity types; if so, will run the second pipeline ...
-	Processed 5 / 48 sentences
-	Processed 10 / 48 sentences
-	Processed 15 / 48 sentences
-	Processed 20 / 48 sentences
-	Processed 25 / 48 sentences
-	Processed 30 / 48 sentences
-	Processed 35 / 48 sentences
-	Processed 40 / 48 sentences
-	Processed 45 / 48 sentences
-		=== Extracted Relation ===
-		Sentence: Therefore, when Google cofounders Larry Page and Sergey Brin announced the creation of Alphabet Inc., in August 2015, it came as no surprise to industry insiders that Pichai was named CEO of Google, which was reorganized as a subsidiary.
-		Subject: Pichai ; Object: Google ;
-		Duplicate. Ignoring this.
-		================
-
-		=== Extracted Relation ===
-		Sentence: In December 2019 he also was named CEO of Alphabet, replacing Page, who stepped down.
-		Subject: Page ; Object: Alphabet ;
-		Adding to set of extracted relations
-		================
-
-
-
-	Extracted annotations for  2  out of total  48  sentences
-	Relations extracted from this website: 1 (Overall: 2)
-
-
-URL (8 / 10): https://www.businessroundtable.org/about-us/members/sundar-pichai-ceo-alphabet-inc
-	Fetching text from url...
-	Webpage length (num characters): 4571
-	Annotating the webpage using spacy ...
-	Extracted 19 sentences. Processing each sentence one by one to check for presence of right pair of named entity types; if so, will run the second pipeline ...
-	Processed 5 / 19 sentences
-	Processed 10 / 19 sentences
-	Processed 15 / 19 sentences
-
-
-	Extracted annotations for  0  out of total  19  sentences
-	Relations extracted from this website: 0 (Overall: 0)
-
-
-URL (9 / 10): https://www.cnbc.com/2024/02/28/google-ceo-tells-employees-gemini-ai-blunder-unacceptable.html
-	Fetching text from url...
-	Webpage length (num characters): 9240
-	Annotating the webpage using spacy ...
-	Extracted 64 sentences. Processing each sentence one by one to check for presence of right pair of named entity types; if so, will run the second pipeline ...
-	Processed 5 / 64 sentences
-	Processed 10 / 64 sentences
-	Processed 15 / 64 sentences
-	Processed 20 / 64 sentences
-		=== Extracted Relation ===
-		Sentence: your favorite stocksCREATE FREE ACCOUNTGoogle CEO Sundar Pichai speaks with Emily Chang during the APEC CEO Summit at Moscone Center West in San Francisco on Nov. 16, 2023.Justin Sullivan | Getty Images News | Getty ImagesIn a memo Tuesday evening, Google CEO Sundar Pichai addressed the company’s artificial intelligence mistakes, which led to Google taking its Gemini image-generation feature offline for further testing.
-		Subject: Sundar Pichai ; Object: Google ;
-		Duplicate. Ignoring this.
-		================
-
-	Processed 25 / 64 sentences
-	Processed 30 / 64 sentences
-	Processed 35 / 64 sentences
-	Processed 40 / 64 sentences
-	Processed 45 / 64 sentences
-	Processed 50 / 64 sentences
-	Processed 55 / 64 sentences
-	Processed 60 / 64 sentences
-
-
-	Extracted annotations for  1  out of total  64  sentences
-	Relations extracted from this website: 0 (Overall: 1)
-
-
-URL (10 / 10): http://abc.xyz/
-	Fetching text from url...
-	Webpage length (num characters): 5820
-	Annotating the webpage using spacy ...
-	Extracted 60 sentences. Processing each sentence one by one to check for presence of right pair of named entity types; if so, will run the second pipeline ...
-	Processed 5 / 60 sentences
-	Processed 10 / 60 sentences
-		=== Extracted Relation ===
-		Sentence: I am really excited to be running Alphabet as CEO with help from my capable partner, Sergey, as President.
-		Subject: Sergey ; Object: Alphabet ;
-		Adding to set of extracted relations
-		================
-
-	Processed 15 / 60 sentences
-	Processed 20 / 60 sentences
-	Processed 25 / 60 sentences
-	Processed 30 / 60 sentences
-	Processed 35 / 60 sentences
-	Processed 40 / 60 sentences
-	Processed 45 / 60 sentences
-	Processed 50 / 60 sentences
-	Processed 55 / 60 sentences
-	Processed 60 / 60 sentences
-
-
-	Extracted annotations for  1  out of total  60  sentences
-	Relations extracted from this website: 1 (Overall: 1)
-
-
-================== ALL RELATIONS for Work_For ( 22 ) =================
-Subject: Andy Rubin	| Object: Jive Software
-Subject: Aravind Srinivas	| Object: DeepMind
-Subject: Sundar Pichai	| Object: Google, Inc.
-Subject: Mark Zuckerberg	| Object: Facebook
-Subject: Jack Dorsey	| Object: Twitter
-Subject: Pichai	| Object: Alphabet
-Subject: Larry Page	| Object: Google
-Subject: Sundar Pichai	| Object: Google
-Subject: Page	| Object: Alphabet
-Subject: Sundar Pichai	| Object: Alphabet Inc.
-Subject: Aravind Srinivas	| Object: Google
-Subject: Aravind Srinivas	| Object: OpenAI
-Subject: Regunatha Pichai	| Object: GEC
-Subject: Pichai	| Object: McKinsey & Company
-Subject: Aravind Srinivas	| Object: Perplexity
-Subject: Pichai	| Object: Applied Materials
-Subject: Pichai	| Object: Google
-Subject: Axel Springer	| Object: Business Insider
-Subject: Sergey	| Object: Alphabet
-Subject: Pichai	| Object: Alphabet Inc.
-Subject: Ben Thompson	| Object: Google
-Subject: Marissa Mayer	| Object: Google
+================== ALL RELATIONS for Work_For ( 13 ) =================
+Subject: Bill Gates                          | Object: Microsoft Corporation
+Subject: Bill Gates                          | Object: Harvard University
+Subject: William Henry Gates III             | Object: Microsoft
+Subject: Bill Gates                          | Object: Bill & Melinda Gates Foundation
+Subject: Allen                               | Object: Microsoft
+Subject: Satya Nadella                       | Object: Microsoft
+Subject: Gates                               | Object: Microsoft
+Subject: Gates                               | Object: Bill & Melinda Gates Foundation
+Subject: Gates                               | Object: Lakeside School
+Subject: he                                  | Object: Microsoft
+Subject: Gates                               | Object: Harvard University
+Subject: Gates                               | Object: Berkshire Hathaway
+Subject: Bill Gates                          | Object: Microsoft
 Total # of iterations = 1
-=========== Iteration: 2 - Query: larry page google ===========
-URL (1 / 10): https://en.wikipedia.org/wiki/Larry_Page
-	Fetching text from url...
-	trimming webpage length from 81150 to 10000
-	Webpage length (num characters): 10000
-	Annotating the webpage using spacy ...
-	Extracted 58 sentences. Processing each sentence one by one to check for presence of right pair of named entity types; if so, will run the second pipeline ...
-	Processed 5 / 58 sentences
-	Processed 10 / 58 sentences
-		=== Extracted Relation ===
-		Sentence: Page was chief executive officer of Google from 1997 until August 2001 when he stepped down in favor of Eric Schmidt and then again from April 2011 until July 2015 when he became CEO of its newly formed parent organisation Alphabet Inc. which was created to deliver "major advancements" as Google's parent company,[6] a post he held until December 4, 2019, when he along with his co-founder Brin stepped down from all executive positions and day-to-day roles within the company.
-		Subject: Page ; Object: Google ;
-		Adding to set of extracted relations
-		================
-
-		=== Extracted Relation ===
-		Sentence: Page was chief executive officer of Google from 1997 until August 2001 when he stepped down in favor of Eric Schmidt and then again from April 2011 until July 2015 when he became CEO of its newly formed parent organisation Alphabet Inc. which was created to deliver "major advancements" as Google's parent company,[6] a post he held until December 4, 2019, when he along with his co-founder Brin stepped down from all executive positions and day-to-day roles within the company.
-		Subject: Eric Schmidt ; Object: Google ;
-		Adding to set of extracted relations
-		================
-
-		=== Extracted Relation ===
-		Sentence: Page was chief executive officer of Google from 1997 until August 2001 when he stepped down in favor of Eric Schmidt and then again from April 2011 until July 2015 when he became CEO of its newly formed parent organisation Alphabet Inc. which was created to deliver "major advancements" as Google's parent company,[6] a post he held until December 4, 2019, when he along with his co-founder Brin stepped down from all executive positions and day-to-day roles within the company.
-		Subject: Page ; Object: Alphabet Inc. ;
-		Adding to set of extracted relations
-		================
-
-		=== Extracted Relation ===
-		Sentence: Page was chief executive officer of Google from 1997 until August 2001 when he stepped down in favor of Eric Schmidt and then again from April 2011 until July 2015 when he became CEO of its newly formed parent organisation Alphabet Inc. which was created to deliver "major advancements" as Google's parent company,[6] a post he held until December 4, 2019, when he along with his co-founder Brin stepped down from all executive positions and day-to-day roles within the company.
-		Subject: Brin ; Object: Google ;
-		Adding to set of extracted relations
-		================
-
-	Processed 15 / 58 sentences
-	Processed 20 / 58 sentences
-	Processed 25 / 58 sentences
-	Processed 30 / 58 sentences
-	Processed 35 / 58 sentences
-	Processed 40 / 58 sentences
-	Processed 45 / 58 sentences
-	Processed 50 / 58 sentences
-	Processed 55 / 58 sentences
-
-
-	Extracted annotations for  1  out of total  58  sentences
-	Relations extracted from this website: 4 (Overall: 4)
-
-
-URL (2 / 10): https://www.forbes.com/profile/larry-page/
-	Fetching text from url...
-	Webpage length (num characters): 6448
-	Annotating the webpage using spacy ...
-	Extracted 38 sentences. Processing each sentence one by one to check for presence of right pair of named entity types; if so, will run the second pipeline ...
-		=== Extracted Relation ===
-		Sentence: Page was CEO until 2001, when Eric Schmidt took over, and then from 2011 until 2015, when he became CEO of Google's new parent firm Alphabet.
-		Subject: Page ; Object: Google ;
-		Duplicate. Ignoring this.
-		================
-
-		=== Extracted Relation ===
-		Sentence: Page was CEO until 2001, when Eric Schmidt took over, and then from 2011 until 2015, when he became CEO of Google's new parent firm Alphabet.
-		Subject: Eric Schmidt ; Object: Google ;
-		Duplicate. Ignoring this.
-		================
-
-		=== Extracted Relation ===
-		Sentence: Page was CEO until 2001, when Eric Schmidt took over, and then from 2011 until 2015, when he became CEO of Google's new parent firm Alphabet.
-		Subject: Page ; Object: Alphabet ;
-		Duplicate. Ignoring this.
-		================
-
-	Processed 5 / 38 sentences
-	Processed 10 / 38 sentences
-	Processed 15 / 38 sentences
-	Processed 20 / 38 sentences
-	Processed 25 / 38 sentences
-	Processed 30 / 38 sentences
-	Processed 35 / 38 sentences
-
-
-	Extracted annotations for  1  out of total  38  sentences
-	Relations extracted from this website: 0 (Overall: 3)
-
-
-URL (3 / 10): https://www.britannica.com/biography/Larry-Page
-	Fetching text from url...
-	Webpage length (num characters): 7496
-	Annotating the webpage using spacy ...
-	Extracted 56 sentences. Processing each sentence one by one to check for presence of right pair of named entity types; if so, will run the second pipeline ...
-	Processed 5 / 56 sentences
-	Processed 10 / 56 sentences
-	Processed 15 / 56 sentences
-	Processed 20 / 56 sentences
-	Processed 25 / 56 sentences
-	Processed 30 / 56 sentences
-	Processed 35 / 56 sentences
-	Processed 40 / 56 sentences
-	Processed 45 / 56 sentences
-		=== Extracted Relation ===
-		Sentence: By September 1998 the two had founded Google Inc., with Page as chief executive officer (CEO).
-		Subject: Page ; Object: Google Inc. ;
-		Adding to set of extracted relations
-		================
-
-		=== Extracted Relation ===
-		Sentence: However, both he and Brin remained intimately involved in running Google.
-		Subject: Brin ; Object: Google ;
-		Duplicate. Ignoring this.
-		================
-
-	Processed 50 / 56 sentences
-		=== Extracted Relation ===
-		Sentence: In 2011 Page resumed his duties as Google’s CEO, Schmidt having moved to the position of executive chairman.
-		Subject: Page ; Object: Google ;
-		Duplicate. Ignoring this.
-		================
-
-		=== Extracted Relation ===
-		Sentence: In 2011 Page resumed his duties as Google’s CEO, Schmidt having moved to the position of executive chairman.
-		Subject: Schmidt ; Object: Google ;
-		Adding to set of extracted relations
-		================
-
-		=== Extracted Relation ===
-		Sentence: Google was restructured in August 2015 as a subsidiary of the newly created holding company Alphabet Inc., and Page became CEO of Alphabet.
-		Subject: Page ; Object: Alphabet Inc. ;
-		Duplicate. Ignoring this.
-		================
-
-	Processed 55 / 56 sentences
-
-
-	Extracted annotations for  4  out of total  56  sentences
-	Relations extracted from this website: 2 (Overall: 5)
-
-
-URL (4 / 10): https://www.linkedin.com/pulse/enigmatic-disappearance-googles-founders-larry-page-sergey-elharony-arfef
-	Fetching text from url...
-	Webpage length (num characters): 7069
-	Annotating the webpage using spacy ...
-	Extracted 44 sentences. Processing each sentence one by one to check for presence of right pair of named entity types; if so, will run the second pipeline ...
-	Processed 5 / 44 sentences
-	Processed 10 / 44 sentences
-		=== Extracted Relation ===
-		Sentence: Their departure from active roles in Google marked a significant shift, with Sundar Pichai taking over as the face of the company.
-		Subject: Sundar Pichai ; Object: Google ;
-		Duplicate. Ignoring this.
-		================
-
-	Processed 15 / 44 sentences
-	Processed 20 / 44 sentences
-	Processed 25 / 44 sentences
-	Processed 30 / 44 sentences
-	Processed 35 / 44 sentences
-	Processed 40 / 44 sentences
-
-
-	Extracted annotations for  1  out of total  44  sentences
-	Relations extracted from this website: 0 (Overall: 1)
-
-
-URL (5 / 10): http://abc.xyz/
-	Fetching text from url...
-	Webpage length (num characters): 5820
-	Annotating the webpage using spacy ...
-	Extracted 60 sentences. Processing each sentence one by one to check for presence of right pair of named entity types; if so, will run the second pipeline ...
-	Processed 5 / 60 sentences
-	Processed 10 / 60 sentences
-		=== Extracted Relation ===
-		Sentence: I am really excited to be running Alphabet as CEO with help from my capable partner, Sergey, as President.
-		Subject: Sergey ; Object: Alphabet ;
-		Duplicate. Ignoring this.
-		================
-
-	Processed 15 / 60 sentences
-	Processed 20 / 60 sentences
-	Processed 25 / 60 sentences
-	Processed 30 / 60 sentences
-	Processed 35 / 60 sentences
-	Processed 40 / 60 sentences
-	Processed 45 / 60 sentences
-		=== Extracted Relation ===
-		Sentence: Our two classes of shares will continue to trade on Nasdaq as GOOGL and GOOG.For Sergey and me this is a very exciting new chapter in the life of Google—the birth of Alphabet.
-		Subject: Sergey ; Object: Google ;
-		Adding to set of extracted relations
-		================
-
-	Processed 50 / 60 sentences
-	Processed 55 / 60 sentences
-	Processed 60 / 60 sentences
-
-
-	Extracted annotations for  2  out of total  60  sentences
-	Relations extracted from this website: 1 (Overall: 2)
-
-
-URL (6 / 10): https://engineering.stanford.edu/about/heroes/2014-heroes/larry-page
-	Fetching text from url...
-	Webpage length (num characters): 6806
-	Annotating the webpage using spacy ...
-	Extracted 39 sentences. Processing each sentence one by one to check for presence of right pair of named entity types; if so, will run the second pipeline ...
-	Processed 5 / 39 sentences
-	Processed 10 / 39 sentences
-	Processed 15 / 39 sentences
-	Processed 20 / 39 sentences
-	Processed 25 / 39 sentences
-	Processed 30 / 39 sentences
-	Processed 35 / 39 sentences
-
-
-	Extracted annotations for  0  out of total  39  sentences
-	Relations extracted from this website: 0 (Overall: 0)
-
-
-URL (7 / 10): https://www.inc.com/jennifer-conrad/google-co-founder-larry-page-bought-an-island-in-puerto-rico-heres-how-rich-you-have-to-be-to-do-that.html
-	Fetching text from url...
-	Failed to retrieve content from URL: https://www.inc.com/jennifer-conrad/google-co-founder-larry-page-bought-an-island-in-puerto-rico-heres-how-rich-you-have-to-be-to-do-that.html. Status code: 403
-	Skipping the URL as no text was extracted
-URL (8 / 10): https://research.google/people/lawrence-page/
-	Fetching text from url...
-	Webpage length (num characters): 3778
-	Annotating the webpage using spacy ...
-	Extracted 28 sentences. Processing each sentence one by one to check for presence of right pair of named entity types; if so, will run the second pipeline ...
-		=== Extracted Relation ===
-		Sentence: He continues to share responsibility for Google's day-to-day operations with Eric Schmidt and Sergey Brin.
-		Subject: Eric Schmidt ; Object: Google ;
-		Duplicate. Ignoring this.
-		================
-
-		=== Extracted Relation ===
-		Sentence: He continues to share responsibility for Google's day-to-day operations with Eric Schmidt and Sergey Brin.
-		Subject: Sergey Brin ; Object: Google ;
-		Adding to set of extracted relations
-		================
-
-	Processed 5 / 28 sentences
-		=== Extracted Relation ===
-		Sentence: While in the Ph.D. program in computer science at Stanford University, Larry met Sergey Brin and together they developed and ran Google, which began operating in 1998.
-		Subject: Larry ; Object: Google ;
-		Adding to set of extracted relations
-		================
-
-		=== Extracted Relation ===
-		Sentence: While in the Ph.D. program in computer science at Stanford University, Larry met Sergey Brin and together they developed and ran Google, which began operating in 1998.
-		Subject: Sergey Brin ; Object: Google ;
-		Duplicate. Ignoring this.
-		================
-
-		=== Extracted Relation ===
-		Sentence: He is a member of the National Advisory Committee (NAC) of the University of Michigan College of Engineering, and together with Co-Founder Sergey Brin, Larry was honored with the Marconi Prize in 2004.
-		Subject: Larry ; Object: University of Michigan College of Engineering ;
-		Adding to set of extracted relations
-		================
-
-		=== Extracted Relation ===
-		Sentence: He is a member of the National Advisory Committee (NAC) of the University of Michigan College of Engineering, and together with Co-Founder Sergey Brin, Larry was honored with the Marconi Prize in 2004.
-		Subject: Co-Founder Sergey Brin ; Object: Marconi Prize ;
-		Adding to set of extracted relations
-		================
-
-	Processed 10 / 28 sentences
-	Processed 15 / 28 sentences
-	Processed 20 / 28 sentences
-	Processed 25 / 28 sentences
-
-
-	Extracted annotations for  3  out of total  28  sentences
-	Relations extracted from this website: 4 (Overall: 6)
-
-
-URL (9 / 10): https://nypost.com/2024/02/01/real-estate/googles-larry-page-secretly-spent-32m-for-a-private-island/
-	Fetching text from url...
-	Webpage length (num characters): 6695
-	Annotating the webpage using spacy ...
-	Extracted 43 sentences. Processing each sentence one by one to check for presence of right pair of named entity types; if so, will run the second pipeline ...
-	Processed 5 / 43 sentences
-	Processed 10 / 43 sentences
-	Processed 15 / 43 sentences
-	Processed 20 / 43 sentences
-	Processed 25 / 43 sentences
-	Processed 30 / 43 sentences
-	Processed 35 / 43 sentences
-	Processed 40 / 43 sentences
-
-
-	Extracted annotations for  0  out of total  43  sentences
-	Relations extracted from this website: 0 (Overall: 0)
-
-
-URL (10 / 10): https://blog.google/alphabet/letter-from-larry-and-sergey/
-	Fetching text from url...
-	trimming webpage length from 11674 to 10000
-	Webpage length (num characters): 10000
-	Annotating the webpage using spacy ...
-	Extracted 71 sentences. Processing each sentence one by one to check for presence of right pair of named entity types; if so, will run the second pipeline ...
-	Processed 5 / 71 sentences
-	Processed 10 / 71 sentences
-	Processed 15 / 71 sentences
-	Processed 20 / 71 sentences
-	Processed 25 / 71 sentences
-	Processed 30 / 71 sentences
-	Processed 35 / 71 sentences
-	Processed 40 / 71 sentences
-	Processed 45 / 71 sentences
-	Processed 50 / 71 sentences
-	Processed 55 / 71 sentences
-	Processed 60 / 71 sentences
-	Processed 65 / 71 sentences
-	Processed 70 / 71 sentences
-
-
-	Extracted annotations for  0  out of total  71  sentences
-	Relations extracted from this website: 0 (Overall: 0)
-
-
-================== ALL RELATIONS for Work_For ( 33 ) =================
-Subject: Andy Rubin	| Object: Jive Software
-Subject: Aravind Srinivas	| Object: DeepMind
-Subject: Sergey Brin	| Object: Google
-Subject: Sundar Pichai	| Object: Google, Inc.
-Subject: Page	| Object: Alphabet Inc.
-Subject: Mark Zuckerberg	| Object: Facebook
-Subject: Jack Dorsey	| Object: Twitter
-Subject: Pichai	| Object: Alphabet
-Subject: Larry	| Object: University of Michigan College of Engineering
-Subject: Larry Page	| Object: Google
-Subject: Sundar Pichai	| Object: Google
-Subject: Page	| Object: Google Inc.
-Subject: Sergey	| Object: Google
-Subject: Page	| Object: Alphabet
-Subject: Sundar Pichai	| Object: Alphabet Inc.
-Subject: Aravind Srinivas	| Object: Google
-Subject: Aravind Srinivas	| Object: OpenAI
-Subject: Larry	| Object: Google
-Subject: Regunatha Pichai	| Object: GEC
-Subject: Brin	| Object: Google
-Subject: Pichai	| Object: McKinsey & Company
-Subject: Aravind Srinivas	| Object: Perplexity
-Subject: Pichai	| Object: Applied Materials
-Subject: Pichai	| Object: Google
-Subject: Eric Schmidt	| Object: Google
-Subject: Schmidt	| Object: Google
-Subject: Page	| Object: Google
-Subject: Co-Founder Sergey Brin	| Object: Marconi Prize
-Subject: Axel Springer	| Object: Business Insider
-Subject: Sergey	| Object: Alphabet
-Subject: Pichai	| Object: Alphabet Inc.
-Subject: Ben Thompson	| Object: Google
-Subject: Marissa Mayer	| Object: Google
-Total # of iterations = 2
-=========== Iteration: 3 - Query: sergey brin google ===========
-URL (1 / 10): https://en.wikipedia.org/wiki/Sergey_Brin
-	Fetching text from url...
-	trimming webpage length from 39159 to 10000
-	Webpage length (num characters): 10000
-	Annotating the webpage using spacy ...
-	Extracted 73 sentences. Processing each sentence one by one to check for presence of right pair of named entity types; if so, will run the second pipeline ...
-	Processed 5 / 73 sentences
-	Processed 10 / 73 sentences
-		=== Extracted Relation ===
-		Sentence: Sergey Mikhailovich Brin (Russian: Сергей Михайлович Брин; born August 21, 1973) is an American businessman best known for co-founding Google with Larry Page.
-		Subject: Sergey Mikhailovich Brin ; Object: Google ;
-		Adding to set of extracted relations
-		================
-
-		=== Extracted Relation ===
-		Sentence: Sergey Mikhailovich Brin (Russian: Сергей Михайлович Брин; born August 21, 1973) is an American businessman best known for co-founding Google with Larry Page.
-		Subject: Larry Page ; Object: Google ;
-		Duplicate. Ignoring this.
-		================
-
-	Processed 15 / 73 sentences
-		=== Extracted Relation ===
-		Sentence: Brin was the president of Google's parent company, Alphabet Inc., until stepping down from the role on December 3, 2019.[1]
-		Subject: Brin ; Object: Google's parent company ;
-		Adding to set of extracted relations
-		================
-
-		=== Extracted Relation ===
-		Sentence: Brin was the president of Google's parent company, Alphabet Inc., until stepping down from the role on December 3, 2019.[1]
-		Subject: Brin ; Object: Alphabet Inc. ;
-		Adding to set of extracted relations
-		================
-
-	Processed 20 / 73 sentences
-	Processed 25 / 73 sentences
-	Processed 30 / 73 sentences
-		=== Extracted Relation ===
-		Sentence: The Brin family lived in Vienna and Paris while Mikhail Brin secured a teaching position at the University of Maryland with help from Anatole Katok.
-		Subject: Mikhail Brin ; Object: University of Maryland ;
-		Adding to set of extracted relations
-		================
-
-	Processed 35 / 73 sentences
-	Processed 40 / 73 sentences
-		=== Extracted Relation ===
-		Sentence: Search engine development[edit] Left to right, Eric Schmidt, Sergey Brin and Larry Page, 2008 During an orientation for new students at Stanford, he met Larry Page.
-		Subject: Eric Schmidt ; Object: Stanford ;
-		Adding to set of extracted relations
-		================
-
-		=== Extracted Relation ===
-		Sentence: Search engine development[edit] Left to right, Eric Schmidt, Sergey Brin and Larry Page, 2008 During an orientation for new students at Stanford, he met Larry Page.
-		Subject: Larry Page ; Object: Stanford ;
-		Adding to set of extracted relations
-		================
-
-	Processed 45 / 73 sentences
-	Processed 50 / 73 sentences
-	Processed 55 / 73 sentences
-	Processed 60 / 73 sentences
-	Processed 65 / 73 sentences
-	Processed 70 / 73 sentences
-
-
-	Extracted annotations for  4  out of total  73  sentences
-	Relations extracted from this website: 6 (Overall: 7)
-
-
-URL (2 / 10): https://www.cnbc.com/2024/03/04/sergey-brin-says-google-definitely-messed-up-with-gemini-launch-.html
-	Fetching text from url...
-	trimming webpage length from 11904 to 10000
-	Webpage length (num characters): 10000
-	Annotating the webpage using spacy ...
-	Extracted 66 sentences. Processing each sentence one by one to check for presence of right pair of named entity types; if so, will run the second pipeline ...
-	Processed 5 / 66 sentences
-	Processed 10 / 66 sentences
-	Processed 15 / 66 sentences
-	Processed 20 / 66 sentences
-	Processed 25 / 66 sentences
-	Processed 30 / 66 sentences
-		=== Extracted Relation ===
-		Sentence: Brin co-founded Google with Larry Page in 1998, but stepped down as president of Alphabet in 2019.
-		Subject: Brin ; Object: Google ;
-		Duplicate. Ignoring this.
-		================
-
-		=== Extracted Relation ===
-		Sentence: Brin co-founded Google with Larry Page in 1998, but stepped down as president of Alphabet in 2019.
-		Subject: Larry Page ; Object: Google ;
-		Duplicate. Ignoring this.
-		================
-
-		=== Extracted Relation ===
-		Sentence: Brin co-founded Google with Larry Page in 1998, but stepped down as president of Alphabet in 2019.
-		Subject: Brin ; Object: Alphabet ;
-		Adding to set of extracted relations
-		================
-
-	Processed 35 / 66 sentences
-		=== Extracted Relation ===
-		Sentence: The company previously sent prepared statements from Prabhakar Raghavan, Google's head of search, and CEO Sundar Pichai in response to the controversial rollout.
-		Subject: Prabhakar Raghavan ; Object: Google ;
-		Adding to set of extracted relations
-		================
-
-		=== Extracted Relation ===
-		Sentence: The company previously sent prepared statements from Prabhakar Raghavan, Google's head of search, and CEO Sundar Pichai in response to the controversial rollout.
-		Subject: Sundar Pichai ; Object: Google ;
-		Duplicate. Ignoring this.
-		================
-
-	Processed 40 / 66 sentences
-	Processed 45 / 66 sentences
-	Processed 50 / 66 sentences
-	Processed 55 / 66 sentences
-	Processed 60 / 66 sentences
-	Processed 65 / 66 sentences
-
-
-	Extracted annotations for  2  out of total  66  sentences
-	Relations extracted from this website: 2 (Overall: 5)
-
-
-================== ALL RELATIONS for Work_For ( 41 ) =================
-Subject: Andy Rubin	| Object: Jive Software
-Subject: Aravind Srinivas	| Object: DeepMind
-Subject: Sergey Brin	| Object: Google
-Subject: Brin	| Object: Google's parent company
-Subject: Brin	| Object: Alphabet
-Subject: Sundar Pichai	| Object: Google, Inc.
-Subject: Page	| Object: Alphabet Inc.
-Subject: Mark Zuckerberg	| Object: Facebook
-Subject: Jack Dorsey	| Object: Twitter
-Subject: Pichai	| Object: Alphabet
-Subject: Larry	| Object: University of Michigan College of Engineering
-Subject: Mikhail Brin	| Object: University of Maryland
-Subject: Prabhakar Raghavan	| Object: Google
-Subject: Larry Page	| Object: Google
-Subject: Sundar Pichai	| Object: Google
-Subject: Page	| Object: Google Inc.
-Subject: Sergey	| Object: Google
-Subject: Page	| Object: Alphabet
-Subject: Larry Page	| Object: Stanford
-Subject: Sundar Pichai	| Object: Alphabet Inc.
-Subject: Aravind Srinivas	| Object: Google
-Subject: Aravind Srinivas	| Object: OpenAI
-Subject: Larry	| Object: Google
-Subject: Regunatha Pichai	| Object: GEC
-Subject: Brin	| Object: Google
-Subject: Sergey Mikhailovich Brin	| Object: Google
-Subject: Pichai	| Object: McKinsey & Company
-Subject: Aravind Srinivas	| Object: Perplexity
-Subject: Pichai	| Object: Applied Materials
-Subject: Pichai	| Object: Google
-Subject: Eric Schmidt	| Object: Google
-Subject: Schmidt	| Object: Google
-Subject: Brin	| Object: Alphabet Inc.
-Subject: Page	| Object: Google
-Subject: Co-Founder Sergey Brin	| Object: Marconi Prize
-Subject: Eric Schmidt	| Object: Stanford
-Subject: Axel Springer	| Object: Business Insider
-Subject: Sergey	| Object: Alphabet
-Subject: Pichai	| Object: Alphabet Inc.
-Subject: Ben Thompson	| Object: Google
-Subject: Marissa Mayer	| Object: Google
-Total # of iterations = 3
