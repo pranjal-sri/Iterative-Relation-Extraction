@@ -28,7 +28,6 @@ def parse_arguments():
 
     return mode, google_api_key, google_engine_id, gemini_api_key, r, t, q, k
 
-
 def main():
     mode, google_api_key, google_engine_id, gemini_api_key, r, t, q, k = parse_arguments()
     # print("Mode:", mode)

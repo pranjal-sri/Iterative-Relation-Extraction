@@ -4,7 +4,6 @@ from bs4 import BeautifulSoup
 import re
 import requests.exceptions as rexceptions
 
-
 class QueryManager:
 
     # initializing object constructor with required parameters
@@ -78,24 +77,6 @@ class QueryManager:
             else:
                 continue
         return items
-    
-    def __extract_text_from_url(self, url):
-        try:
-            response = requests.get(url)
-            if response.status_code == 200:
-                soup = BeautifulSoup(response.content, 'html.parser')
-                text = soup.get_text()
-                text = re.sub(r'\n+', '\n', text)
-                text = re.sub(r'\t+', '\t', text)
-                return text
-            else:
-                print(f"Failed to retrieve content from URL: {url}. Status code: {response.status_code}")
-                return None
-        except Exception as e:
-            print(f"An error occurred while extracting text from URL: {url}")
-            print(f"Error details: {str(e)}")
-            return None
-
 
 if __name__ == '__main__':
     pass

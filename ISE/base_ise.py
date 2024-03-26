@@ -41,7 +41,6 @@ class BaseISE:
         self.url_stats['candidate_relations'] += n_extracted_relations
         self.url_stats['accepted_relations'] += n_accepted_relations
 
-    
     def level_log(self, message, level =0):
         indent = ['\t'] * level
         indent = ''.join(indent)

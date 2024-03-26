@@ -113,4 +113,3 @@ class SpanBertISE(BaseISE):
                     break
 
             self.log_relations(self.X, iteration)
-        
