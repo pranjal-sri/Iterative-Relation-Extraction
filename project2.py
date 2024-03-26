@@ -39,7 +39,7 @@ def main():
     # print("Query:", q)
     # print("K:", k)
     # import pdb; pdb.set_trace();
-    f = open(f'out_gemini_rel_{r}.log', 'w')
+    f = open(f'out_{mode[1:]}_rel_{r}.log', 'w')
     original_out = sys.stdout
     sys.stdout = f
 

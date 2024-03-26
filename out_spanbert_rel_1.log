@@ -1,0 +1,364 @@
+Loading pre-trained spanBERT from ./SpanBERT/pretrained_spanbert
+
+
+____
+Parameters:
+Client key   = AIzaSyDuSM_JnE7BUIaW54cgZLIcNgEwm79URsg
+Engine key   = 3430a164067404160
+Gemini key   = AIzaSyCb33bJ89z6RxiXUmce0_zU2BLfJ_J9Ym4
+Method       = spanbert
+Relation     = Schools_Attended
+Threshold    = 0.7
+Query        = sergey brin stanford
+# of Tuples  = 10
+Loading necessary libraries; This should take a minute or so ...)
+=========== Iteration: 1 - Query: sergey brin stanford ===========
+URL (1 / 10): https://engineering.stanford.edu/about/heroes/2014-heroes/sergey-brin
+	Fetching text from url...
+	Webpage length (num characters): 6736
+	Annotating the webpage using spacy ...
+	Extracted 38 sentences. Processing each sentence one by one to check for presence of right pair of named entity types; if so, will run the second pipeline ...
+	Processed 5 / 38 sentences
+	Processed 10 / 38 sentences
+	Processed 15 / 38 sentences
+	Processed 20 / 38 sentences
+		=== Extracted Relation ===
+		Input tokens: ['Future', 'Main', 'content', 'start', 'Sergey', 'Brin', '—', 'Google', 'co', '-', 'founder', 'Sergey', 'Brin', 'co', '-', 'founded', 'web', '-', 'search', 'giant', 'Google', 'Inc.', 'in', '1998', 'with', 'fellow', 'Stanford', 'student', 'Larry', 'Page', '.']
+		Output Confidence: 0.6876006722450256 ; Subject: Sergey Brin ; Object: Stanford ;
+		Confidence is lower than threshold confidence. Ignoring this.
+		================
+
+		=== Extracted Relation ===
+		Input tokens: ['Google', 'co', '-', 'founder', 'Sergey', 'Brin', 'co', '-', 'founded', 'web', '-', 'search', 'giant', 'Google', 'Inc.', 'in', '1998', 'with', 'fellow', 'Stanford', 'student', 'Larry', 'Page', '.']
+		Output Confidence: 0.8269374370574951 ; Subject: Larry Page ; Object: Google ;
+		Adding to set of extracted relations
+		================
+
+		=== Extracted Relation ===
+		Input tokens: ['founder', 'Sergey', 'Brin', 'co', '-', 'founded', 'web', '-', 'search', 'giant', 'Google', 'Inc.', 'in', '1998', 'with', 'fellow', 'Stanford', 'student', 'Larry', 'Page', '.']
+		Output Confidence: 0.8182793855667114 ; Subject: Sergey Brin ; Object: Stanford ;
+		Adding to set of extracted relations
+		================
+
+		=== Extracted Relation ===
+		Input tokens: ['search', 'giant', 'Google', 'Inc.', 'in', '1998', 'with', 'fellow', 'Stanford', 'student', 'Larry', 'Page', '.']
+		Output Confidence: 0.9513417482376099 ; Subject: Larry Page ; Object: Stanford ;
+		Adding to set of extracted relations
+		================
+
+		=== Extracted Relation ===
+		Input tokens: ['Brin', 'earned', 'his', 'master', '’s', 'degree', 'in', 'computer', 'science', 'at', 'Stanford', ',']
+		Output Confidence: 0.7757271528244019 ; Subject: Brin ; Object: Stanford ;
+		Adding to set of extracted relations
+		================
+
+		=== Extracted Relation ===
+		Input tokens: ['Brin', 'earned', 'his', 'master', '’s', 'degree', 'in', 'computer', 'science', 'at', 'Stanford', ',', 'where', 'he', 'and', 'Page', 'developed', 'the', '“']
+		Output Confidence: 0.930168867111206 ; Subject: Page ; Object: Stanford ;
+		Adding to set of extracted relations
+		================
+
+	Processed 25 / 38 sentences
+	Processed 30 / 38 sentences
+	Processed 35 / 38 sentences
+
+
+	Extracted annotations for  2  out of total  38  sentences
+	Relations extracted from this website: 5 (Overall: 6)
+
+
+URL (2 / 10): http://infolab.stanford.edu/~sergey/
+	Fetching text from url...
+	Webpage length (num characters): 4579
+	Annotating the webpage using spacy ...
+	Extracted 58 sentences. Processing each sentence one by one to check for presence of right pair of named entity types; if so, will run the second pipeline ...
+		=== Extracted Relation ===
+		Input tokens: [' ', 'Sergey', 'Brin', 'Sergey', 'Brin', "'s", 'Home', 'Page', 'Ph.D.', 'student', 'in', 'Computer', 'Science', 'at', 'Stanford', '-', 'sergey@cs.stanford.edu', 'Research', 'Currently', 'I', 'am', 'at', 'Google', '.']
+		Output Confidence: 0.584408700466156 ; Subject: Sergey Brin Sergey Brin's ; Object: Stanford - sergey@cs.stanford.edu Research ;
+		Confidence is lower than threshold confidence. Ignoring this.
+		================
+
+		=== Extracted Relation ===
+		Input tokens: [' ', 'Sergey', 'Brin', 'Sergey', 'Brin', "'s", 'Home', 'Page', 'Ph.D.', 'student', 'in', 'Computer', 'Science', 'at', 'Stanford', '-', 'sergey@cs.stanford.edu', 'Research', 'Currently', 'I', 'am', 'at', 'Google', '.']
+		Output Confidence: 0.4831583499908447 ; Subject: Sergey Brin Sergey Brin's ; Object: Google ;
+		Confidence is lower than threshold confidence. Ignoring this.
+		================
+
+	Processed 5 / 58 sentences
+	Processed 10 / 58 sentences
+	Processed 15 / 58 sentences
+	Processed 20 / 58 sentences
+	Processed 25 / 58 sentences
+	Processed 30 / 58 sentences
+	Processed 35 / 58 sentences
+	Processed 40 / 58 sentences
+		=== Extracted Relation ===
+		Input tokens: ['Together', 'with', 'James', 'Davis', '(', 'another', 'Ph.D.', 'student', 'here', ')', ',', 'we', 'developed', 'COPS', ',', 'the', 'COpyright', 'Protection', 'System', '.']
+		Output Confidence: 0.534650981426239 ; Subject: James Davis ; Object: the COpyright Protection System ;
+		Confidence is lower than threshold confidence. Ignoring this.
+		================
+
+	Processed 45 / 58 sentences
+	Processed 50 / 58 sentences
+	Processed 55 / 58 sentences
+
+
+	Extracted annotations for  2  out of total  58  sentences
+	Relations extracted from this website: 0 (Overall: 3)
+
+
+URL (3 / 10): https://en.wikipedia.org/wiki/Sergey_Brin
+	Fetching text from url...
+	trimming webpage length from 39160 to 10000
+	Webpage length (num characters): 10000
+	Annotating the webpage using spacy ...
+	Extracted 73 sentences. Processing each sentence one by one to check for presence of right pair of named entity types; if so, will run the second pipeline ...
+	Processed 5 / 73 sentences
+	Processed 10 / 73 sentences
+	Processed 15 / 73 sentences
+	Processed 20 / 73 sentences
+	Processed 25 / 73 sentences
+		=== Extracted Relation ===
+		Input tokens: ['Mikhail', 'and', 'Eugenia', 'Brin', ',', 'both', 'graduates', 'of', 'Moscow', 'State', 'University', '(']
+		Output Confidence: 0.9927895665168762 ; Subject: Mikhail ; Object: Moscow State University ;
+		Adding to set of extracted relations
+		================
+
+		=== Extracted Relation ===
+		Input tokens: ['Mikhail', 'and', 'Eugenia', 'Brin', ',', 'both', 'graduates', 'of', 'Moscow', 'State', 'University', '(']
+		Output Confidence: 0.9908487200737 ; Subject: Eugenia Brin ; Object: Moscow State University ;
+		Adding to set of extracted relations
+		================
+
+	Processed 30 / 73 sentences
+	Processed 35 / 73 sentences
+	Processed 40 / 73 sentences
+		=== Extracted Relation ===
+		Input tokens: ['Eric', 'Schmidt', ',', 'Sergey', 'Brin', 'and', 'Larry', 'Page', ',', '2008', 'During', 'an', 'orientation', 'for', 'new', 'students', 'at', 'Stanford', ',']
+		Output Confidence: 0.48997762799263 ; Subject: Eric Schmidt ; Object: Stanford ;
+		Confidence is lower than threshold confidence. Ignoring this.
+		================
+
+	Processed 45 / 73 sentences
+	Processed 50 / 73 sentences
+	Processed 55 / 73 sentences
+	Processed 60 / 73 sentences
+	Processed 65 / 73 sentences
+	Processed 70 / 73 sentences
+
+
+	Extracted annotations for  2  out of total  73  sentences
+	Relations extracted from this website: 2 (Overall: 3)
+
+
+URL (4 / 10): https://www.quora.com/What-was-it-like-to-be-at-Stanford-with-Sergey-Brin-and-Larry-Page
+	Fetching text from url...
+	Webpage length (num characters): 194
+	Annotating the webpage using spacy ...
+	Extracted 4 sentences. Processing each sentence one by one to check for presence of right pair of named entity types; if so, will run the second pipeline ...
+
+
+	Extracted annotations for  0  out of total  4  sentences
+	Relations extracted from this website: 0 (Overall: 0)
+
+
+URL (5 / 10): https://snap.stanford.edu/class/cs224w-readings/Brin98Anatomy.pdf
+	Fetching text from url...
+	trimming webpage length from 1271061 to 10000
+	Webpage length (num characters): 10000
+	Annotating the webpage using spacy ...
+	Extracted 229 sentences. Processing each sentence one by one to check for presence of right pair of named entity types; if so, will run the second pipeline ...
+	Processed 5 / 229 sentences
+	Processed 10 / 229 sentences
+	Processed 15 / 229 sentences
+	Processed 20 / 229 sentences
+	Processed 25 / 229 sentences
+	Processed 30 / 229 sentences
+	Processed 35 / 229 sentences
+	Processed 40 / 229 sentences
+	Processed 45 / 229 sentences
+	Processed 50 / 229 sentences
+	Processed 55 / 229 sentences
+	Processed 60 / 229 sentences
+	Processed 65 / 229 sentences
+	Processed 70 / 229 sentences
+	Processed 75 / 229 sentences
+	Processed 80 / 229 sentences
+	Processed 85 / 229 sentences
+	Processed 90 / 229 sentences
+	Processed 95 / 229 sentences
+	Processed 100 / 229 sentences
+	Processed 105 / 229 sentences
+	Processed 110 / 229 sentences
+	Processed 115 / 229 sentences
+	Processed 120 / 229 sentences
+	Processed 125 / 229 sentences
+	Processed 130 / 229 sentences
+	Processed 135 / 229 sentences
+	Processed 140 / 229 sentences
+	Processed 145 / 229 sentences
+	Processed 150 / 229 sentences
+	Processed 155 / 229 sentences
+	Processed 160 / 229 sentences
+	Processed 165 / 229 sentences
+	Processed 170 / 229 sentences
+	Processed 175 / 229 sentences
+	Processed 180 / 229 sentences
+	Processed 185 / 229 sentences
+	Processed 190 / 229 sentences
+	Processed 195 / 229 sentences
+	Processed 200 / 229 sentences
+	Processed 205 / 229 sentences
+	Processed 210 / 229 sentences
+	Processed 215 / 229 sentences
+	Processed 220 / 229 sentences
+	Processed 225 / 229 sentences
+
+
+	Extracted annotations for  0  out of total  229  sentences
+	Relations extracted from this website: 0 (Overall: 0)
+
+
+URL (6 / 10): https://news.stanford.edu/2022/08/05/wastewaterscan-will-monitor-wastewater-covid-19-monkeypox-diseases/
+	Fetching text from url...
+	Webpage length (num characters): 7484
+	Annotating the webpage using spacy ...
+	Extracted 38 sentences. Processing each sentence one by one to check for presence of right pair of named entity types; if so, will run the second pipeline ...
+	Processed 5 / 38 sentences
+	Processed 10 / 38 sentences
+		=== Extracted Relation ===
+		Input tokens: ['said', 'Alexandria', 'Boehm', ',', 'professor', 'of', 'civil', 'and', 'environmental', 'engineering', 'at', 'Stanford', '.']
+		Output Confidence: 0.7337597012519836 ; Subject: Alexandria Boehm ; Object: Stanford ;
+		Adding to set of extracted relations
+		================
+
+	Processed 15 / 38 sentences
+	Processed 20 / 38 sentences
+	Processed 25 / 38 sentences
+	Processed 30 / 38 sentences
+	Processed 35 / 38 sentences
+
+
+	Extracted annotations for  1  out of total  38  sentences
+	Relations extracted from this website: 1 (Overall: 1)
+
+
+URL (7 / 10): https://achievement.org/achiever/sergey-brin/
+	Fetching text from url...
+	Failed to retrieve content from URL: https://achievement.org/achiever/sergey-brin/. Status code: 403
+	Skipping the URL as no text was extracted
+URL (8 / 10): https://news.stanford.edu/report/2022/10/26/campus-curiosities/
+	Fetching text from url...
+	trimming webpage length from 16133 to 10000
+	Webpage length (num characters): 10000
+	Annotating the webpage using spacy ...
+	Extracted 78 sentences. Processing each sentence one by one to check for presence of right pair of named entity types; if so, will run the second pipeline ...
+	Processed 5 / 78 sentences
+	Processed 10 / 78 sentences
+	Processed 15 / 78 sentences
+	Processed 20 / 78 sentences
+	Processed 25 / 78 sentences
+		=== Extracted Relation ===
+		Input tokens: ['From', 'the', 'Huang', 'Engineering', 'Center', 'Innovations', 'Tour', ':', 'As', 'electrical', 'engineering', 'undergraduates', 'and', 'graduate', 'students', 'at', 'Stanford', 'in', 'the', '1930s', ',', 'William', 'Hewlett', 'and', 'David', 'Packard', 'encountered', 'three', 'influences', 'that', 'would', 'guide', 'the', 'rest', 'of', 'their', 'lives', ':']
+		Output Confidence: 0.7330302000045776 ; Subject: David Packard ; Object: the Huang Engineering Center Innovations Tour ;
+		Adding to set of extracted relations
+		================
+
+		=== Extracted Relation ===
+		Input tokens: ['As', 'electrical', 'engineering', 'undergraduates', 'and', 'graduate', 'students', 'at', 'Stanford', 'in', 'the', '1930s', ',', 'William', 'Hewlett', 'and', 'David', 'Packard', 'encountered', 'three', 'influences', 'that', 'would', 'guide', 'the', 'rest', 'of', 'their', 'lives', ':']
+		Output Confidence: 0.6657920479774475 ; Subject: William Hewlett ; Object: Stanford ;
+		Confidence is lower than threshold confidence. Ignoring this.
+		================
+
+		=== Extracted Relation ===
+		Input tokens: ['As', 'electrical', 'engineering', 'undergraduates', 'and', 'graduate', 'students', 'at', 'Stanford', 'in', 'the', '1930s', ',', 'William', 'Hewlett', 'and', 'David', 'Packard', 'encountered', 'three', 'influences', 'that', 'would', 'guide', 'the', 'rest', 'of', 'their', 'lives', ':']
+		Output Confidence: 0.9672188758850098 ; Subject: David Packard ; Object: Stanford ;
+		Adding to set of extracted relations
+		================
+
+	Processed 30 / 78 sentences
+	Processed 35 / 78 sentences
+	Processed 40 / 78 sentences
+	Processed 45 / 78 sentences
+	Processed 50 / 78 sentences
+	Processed 55 / 78 sentences
+	Processed 60 / 78 sentences
+	Processed 65 / 78 sentences
+	Processed 70 / 78 sentences
+	Processed 75 / 78 sentences
+
+
+	Extracted annotations for  1  out of total  78  sentences
+	Relations extracted from this website: 2 (Overall: 3)
+
+
+URL (9 / 10): https://about.google/intl/ALL_us/our-story/
+	Fetching text from url...
+	Webpage length (num characters): 3969
+	Annotating the webpage using spacy ...
+	Extracted 28 sentences. Processing each sentence one by one to check for presence of right pair of named entity types; if so, will run the second pipeline ...
+	Processed 5 / 28 sentences
+		=== Extracted Relation ===
+		Input tokens: ['Larry', 'Page', 'was', 'considering', 'Stanford', 'for', 'grad', 'school', 'and', 'Sergey', 'Brin', ',']
+		Output Confidence: 0.5366025567054749 ; Subject: Larry Page ; Object: Stanford ;
+		Confidence is lower than threshold confidence. Ignoring this.
+		================
+
+	Processed 10 / 28 sentences
+	Processed 15 / 28 sentences
+	Processed 20 / 28 sentences
+	Processed 25 / 28 sentences
+
+
+	Extracted annotations for  1  out of total  28  sentences
+	Relations extracted from this website: 0 (Overall: 1)
+
+
+URL (10 / 10): https://cee.stanford.edu/news/stanford-school-engineering-names-new-engineering-heroes
+	Fetching text from url...
+	trimming webpage length from 10595 to 10000
+	Webpage length (num characters): 10000
+	Annotating the webpage using spacy ...
+	Extracted 62 sentences. Processing each sentence one by one to check for presence of right pair of named entity types; if so, will run the second pipeline ...
+	Processed 5 / 62 sentences
+	Processed 10 / 62 sentences
+		=== Extracted Relation ===
+		Input tokens: ['Irmgard', 'Flügge', '-', 'Lotz', ',', 'Stanford', '’s', 'first', 'female', 'professor', 'of', 'engineering', ',']
+		Output Confidence: 0.5149579644203186 ; Subject: Irmgard Flügge-Lotz ; Object: Stanford ;
+		Confidence is lower than threshold confidence. Ignoring this.
+		================
+
+	Processed 15 / 62 sentences
+	Processed 20 / 62 sentences
+	Processed 25 / 62 sentences
+	Processed 30 / 62 sentences
+	Processed 35 / 62 sentences
+	Processed 40 / 62 sentences
+		=== Extracted Relation ===
+		Input tokens: ['While', 'pursuing', 'a', 'PhD', 'at', 'Stanford', ',', 'Page', 'and', 'fellow', 'student', 'Sergey', 'Brin', 'developed', 'a', '"']
+		Output Confidence: 0.9735056757926941 ; Subject: Sergey Brin ; Object: Stanford ;
+		Adding to set of extracted relations
+		================
+
+	Processed 45 / 62 sentences
+	Processed 50 / 62 sentences
+	Processed 55 / 62 sentences
+	Processed 60 / 62 sentences
+
+
+	Extracted annotations for  2  out of total  62  sentences
+	Relations extracted from this website: 1 (Overall: 2)
+
+
+================== ALL RELATIONS for Schools_Attended ( 10 ) =================
+Confidence:     0.9928| Subject: Mikhail                            | Object: Moscow State University
+Confidence:     0.9908| Subject: Eugenia Brin                       | Object: Moscow State University
+Confidence:     0.9735| Subject: Sergey Brin                        | Object: Stanford
+Confidence:     0.9672| Subject: David Packard                      | Object: Stanford
+Confidence:     0.9513| Subject: Larry Page                         | Object: Stanford
+Confidence:     0.9302| Subject: Page                               | Object: Stanford
+Confidence:     0.8269| Subject: Larry Page                         | Object: Google
+Confidence:     0.7757| Subject: Brin                               | Object: Stanford
+Confidence:     0.7338| Subject: Alexandria Boehm                   | Object: Stanford
+Confidence:     0.7330| Subject: David Packard                      | Object: the Huang Engineering Center Innovations Tour
+Total # of iterations = 1

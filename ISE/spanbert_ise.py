@@ -1,6 +1,6 @@
 from SpanBERT.spanbert import SpanBERT
 from .base_ise import BaseISE
-from .utils import RELATIONS_DICT
+from .utils import RELATIONS_DICT, RELATIONS_INTERNAL_REP
 
 class SpanBertISE(BaseISE):
     def __init__(self, GOOGLE_API_KEY, ENGINE_ID, GEMINI_ID):
@@ -21,27 +21,40 @@ class SpanBertISE(BaseISE):
         query_bank.pop(q_max) 
         return q_max    
 
-    def filter_entityblocks(self, entity_blocks, relation_instruction, sentence):
-        # Recives a list of candidate entities and filters them
+    def filter_sentence(self, entity_blocks, relation_instruction, sentence):
+        # Receives a list of candidate entities and filters them
+        
+        # predict relation using spanbert
         relation_preds = self.spb.predict(entity_blocks)
+
+
         n_extracted_relations = 0
         n_accepted_relations = 0
         ACCEPT, REJECT, DUPLICATE = 0, 1 ,2  
         for candidate, relation_prediction in zip(entity_blocks, relation_preds):
             relation, conf = relation_prediction
+            # if the predicted relation matches with the required relation
             if self.match_relation(relation, relation_instruction):
+
+                # default to REJECT, change to ACCEPT or DUPLICATE if it is confirmed
                 STATE = REJECT
                 n_extracted_relations += 1 
 
-                sub, obj =  candidate['subj'][0], candidate['obj'][0]
+                tokens, sub, obj = candidate['tokens'], candidate['subj'][0], candidate['obj'][0]
+                # if confidence is above threshold
                 if conf >= self.conf_threshold:
+
                     if (sub, obj) in self.X:
+                        # if already present, accept it if higher confidence than existing record
                         if self.X[(sub, obj)] >= conf: STATE = DUPLICATE
                         else: STATE = ACCEPT
                         self.X[(sub, obj)] = max(self.X[sub, obj], conf)
                     else:
+                        # if does not exis, accept it
                         self.X[(sub, obj)] = conf
                         STATE = ACCEPT
+
+                    # updating the query bank with the new extracted relation
                     q_cand = sub+ ' '+obj
                     q_cand = q_cand.lower()
                     if q_cand in self.query_bank:
@@ -49,6 +62,7 @@ class SpanBertISE(BaseISE):
                     else:
                         if q_cand not in self.used_queries: self.query_bank[q_cand] = conf
 
+                # printing the relation
                 self.level_log('=== Extracted Relation ===', level =2) 
                 self.level_log(f'Input tokens: {tokens}', level = 2)
                 self.level_log(f'Output Confidence: {conf} ; Subject: {sub} ; Object: {obj} ;', level = 2)
@@ -84,15 +98,28 @@ class SpanBertISE(BaseISE):
         sorted_relations = {k: v for k, v in sorted_rel_list}
 
         for (subject, obj), confidence in sorted_relations.items():
-            self.level_log(f"Confidence: {confidence:.8f}\t| Subject: {subject}\t| Object: {obj}")
+            self.level_log(f"Confidence: {confidence: 10.4f}| Subject: {subject: <35}| Object: {obj}")
         self.level_log(f"Total # of iterations = {iterations}")
+    
+    def match_relation(self, predicted_relation, relation_instruction):
+        match_template = RELATIONS_INTERNAL_REP[relation_instruction]
+        if type(match_template) is str:
+            match_template = [match_template,]
+        
+        if predicted_relation in match_template:
+            return True
+        else:
+            return False
 
     def ise(self, seed_query, k, relation_instruction, conf_threshold):
+        # entry point for ise on spanbert
         self.print_start(relation_instruction, conf_threshold, seed_query, k)
         self.X = dict()
         self.query_bank = {seed_query.lower(): 100}
         self.used_queries = set()
+        self.used_urls = set()
         self.conf_threshold = conf_threshold
+        
         iteration = 0
         while len(self.X)<k:
             iteration += 1
@@ -103,13 +130,22 @@ class SpanBertISE(BaseISE):
                
             self.level_log(f'=========== Iteration: {iteration} - Query: {q} ===========')
             self.used_queries.add(q) 
+
             res = self.qm.query(q)
+
+            # extracting urls
             urls = [result_item['URL'] for result_item in res]
+
+            # processing urls one by one
             for i, url in enumerate(urls):
                 self.level_log(f'URL ({i+1} / {len(urls)}): {url}')
+                # if the url has already been used, skip it
+                if url in self.used_urls:
+                    self.level_log("URL has already been used. Skipping it ... ", level = 2)
+                    continue
+                self.used_urls.add(url)
+                
+                # call the process_url function on the extracted url
                 self.process_url(url, relation_instruction)
 
-                if len(self.X) >= k:
-                    break
-
-            self.log_relations(self.X, iteration)
+            self.log_relations(relation_instruction, self.X, iteration)
