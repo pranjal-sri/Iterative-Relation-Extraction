@@ -7,7 +7,7 @@ Engine key   = 3430a164067404160
 Gemini key   = AIzaSyCb33bJ89z6RxiXUmce0_zU2BLfJ_J9Ym4
 Method       = gemini
 Relation     = Work_For
-Threshold    = 0.7
+Threshold    = 0.0
 Query        = bill gates microsoft
 # of Tuples  = 10
 Loading necessary libraries; This should take a minute or so ...)
@@ -108,7 +108,7 @@ URL (4 / 10): https://news.microsoft.com/tag/bill-gates/
 	Skipping the URL as no text was extracted
 URL (5 / 10): https://www.britannica.com/biography/Bill-Gates
 	Fetching text from url...
-	trimming webpage length from 12497 to 10000
+	trimming webpage length from 12444 to 10000
 	Webpage length (num characters): 10000
 	Annotating the webpage using spacy ...
 	Extracted 62 sentences. Processing each sentence one by one to check for presence of right pair of named entity types; if so, will run the second pipeline ...
@@ -119,13 +119,13 @@ URL (5 / 10): https://www.britannica.com/biography/Bill-Gates
 	Processed 25 / 62 sentences
 	Processed 30 / 62 sentences
 	Processed 35 / 62 sentences
-	Processed 40 / 62 sentences
 		=== Extracted Relation ===
 		Sentence: Where did Bill Gates go to college?Bill Gates attended Harvard University.
 		Subject: Bill Gates ; Object: Harvard University ;
 		Adding to set of extracted relations
 		================
 
+	Processed 40 / 62 sentences
 		=== Extracted Relation ===
 		Sentence: What are Bill Gates’s major accomplishments?Bill Gates founded the software company Microsoft Corporation with his friend Paul Allen.
 		Subject: Bill Gates ; Object: Microsoft Corporation ;
@@ -232,17 +232,17 @@ URL (10 / 10): https://www.gatesnotes.com/The-Age-of-AI-Has-Begun
 	Failed to retrieve content from URL: https://www.gatesnotes.com/The-Age-of-AI-Has-Begun. Status code: 403
 	Skipping the URL as no text was extracted
 ================== ALL RELATIONS for Work_For ( 13 ) =================
-Subject: Bill Gates                          | Object: Microsoft Corporation
-Subject: Bill Gates                          | Object: Harvard University
-Subject: William Henry Gates III             | Object: Microsoft
-Subject: Bill Gates                          | Object: Bill & Melinda Gates Foundation
-Subject: Allen                               | Object: Microsoft
+Subject: Gates                               | Object: Harvard University
 Subject: Satya Nadella                       | Object: Microsoft
-Subject: Gates                               | Object: Microsoft
 Subject: Gates                               | Object: Bill & Melinda Gates Foundation
+Subject: Bill Gates                          | Object: Microsoft Corporation
+Subject: William Henry Gates III             | Object: Microsoft
 Subject: Gates                               | Object: Lakeside School
 Subject: he                                  | Object: Microsoft
-Subject: Gates                               | Object: Harvard University
-Subject: Gates                               | Object: Berkshire Hathaway
 Subject: Bill Gates                          | Object: Microsoft
+Subject: Bill Gates                          | Object: Harvard University
+Subject: Gates                               | Object: Microsoft
+Subject: Allen                               | Object: Microsoft
+Subject: Bill Gates                          | Object: Bill & Melinda Gates Foundation
+Subject: Gates                               | Object: Berkshire Hathaway
 Total # of iterations = 1
