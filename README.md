@@ -139,7 +139,7 @@ Details about Query Manager Class from Project 1 (`QueryManager/query_manager.py
 
 Details about output:
 
-Once the program is run, the output gets stored in a output log file in the main folder. The format of the log file name is out_{spanbert/gemini}_rel_{1/2/3/4}.log based on the model and the relation type specified by the user.
+Once the program is run, the output gets stored in a output log file in the main folder. The format of the log file name is out_{spanbert/gemini}\_rel\_{1/2/3/4}.log based on the model and the relation type specified by the user.
 
 To see the output in the terminal, after the program has finished execution, run: 
 ```bash
