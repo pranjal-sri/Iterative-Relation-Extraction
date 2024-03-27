@@ -13,7 +13,7 @@ Here is a description of each relation type.
 
 Relation 1 - Schools_Attended: Subject: PERSON, Object: ORGANIZATION, Description: Any school (college, high school, university, etc.) that the assigned person has attended. The mentioned person(subject) has attended any educational organization(object) such as a school, college, high school, university etc.
 
-Relation 2 - Work_For: Subject: PERSON, Object: ORGANIZATION, Description: The mentioned person(subject) has been an employee or member of the organization or entity (object) which can be corporate, educational, political etc.
+Relation 2 - Work_For: Subject: PERSON, Object: ORGANIZATION, Description: The mentioned person (subject) has been an employee or member of the organization or entity (object) which can be corporate, educational, political etc.
 
 Relation 3 - Live_In: Subject: PERSON, Object: LOCATION or CITY or COUNTRY or STATE_OR_PROVINCE, Description: The mentioned person(subject) lives or lived in the geographical entity or area (object) which can be a village or town or city or state or province or country. The object must be filled with a name of the geographical entity.
 
@@ -27,7 +27,7 @@ Also here are some examples of entity pairs and corresponsing relation tuples in
 
 The text is scraped from websites, so it may be irregular and incorrect. So, be flexible in the pairs you extract and extract as many as possible.
 
-Make sure that the entities you extract are proper nouns and do not fall in the category of pronouns like I, we, he, she, they etc.
+Make sure that the entities you extract are proper nouns and not pronouns like I, we, he, she, they etc.
 
 ⁠Extract temporal information if the task requires identifying if the relation is valid for the subject and the object over a specific time period.
 
@@ -68,9 +68,12 @@ class GeminiISE(BaseISE):
         )
 
         # Generate a response
-        response = model.generate_content(prompt, generation_config=generation_config)
-
-        return response.text
+        
+        try:
+            response = model.generate_content(prompt, generation_config=generation_config)
+            return response.text
+        except:
+            return "[]"
 
     def filter_sentence(self, entity_blocks, relation_instruction, sentence):
         
@@ -83,7 +86,7 @@ class GeminiISE(BaseISE):
         
         # parse the output received from gemini
         related_entities = parse_gemini_output(gemini_output)
-        if related_entities is None:
+        if related_entities is None or type(related_entities) is not list:
             print("Gemini output parsing error")
             return 0,0
         
