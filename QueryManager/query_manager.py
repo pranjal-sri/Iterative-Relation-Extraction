@@ -1,5 +1,6 @@
 import requests
 import sys
+# from bs4 import BeautifulSoup
 import re
 from requests.exceptions import  RequestException, Timeout, TooManyRedirects, JSONDecodeError
 
@@ -7,7 +8,7 @@ from requests.exceptions import  RequestException, Timeout, TooManyRedirects, JS
 class QueryManager:
 
     # initializing object constructor with required parameters
-    def _init_(self, API_KEY, engine_id, number_of_results = 10, feature_mapping = None):
+    def __init__(self, API_KEY, engine_id, number_of_results = 10, feature_mapping = None):
         self.API_KEY = API_KEY
         self.engine_id = engine_id
         self.number_of_results = number_of_results
@@ -19,7 +20,7 @@ class QueryManager:
                                     'title': 'Title',
                                     'snippet': 'Summary'}
     
-    def _repr_(self) -> str:
+    def __repr__(self) -> str:
         return f'\nQueryManager(API_KEY={self.API_KEY}, engine_id={self.engine_id},\n number_of_results = {self.number_of_results}, feature_mapping = {self.feature_mapping})'
     
     def query(self, query):
@@ -77,5 +78,5 @@ class QueryManager:
     
 
 
-if _name_ == '_main_':
+if __name__ == '__main__':
     pass
