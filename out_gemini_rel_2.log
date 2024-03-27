@@ -40,12 +40,6 @@ URL (1 / 10): https://en.wikipedia.org/wiki/Bill_Gates
 		Adding to set of extracted relations
 		================
 
-		=== Extracted Relation ===
-		Sentence: In 1975, he and Allen founded Microsoft in Albuquerque, New Mexico.
-		Subject: he ; Object: Microsoft ;
-		Adding to set of extracted relations
-		================
-
 	Processed 25 / 51 sentences
 		=== Extracted Relation ===
 		Sentence: In June 2008, Gates transitioned into a part-time role at Microsoft and full-time work at the Bill & Melinda Gates Foundation, the private charitable foundation he and his then-wife Melinda had established in 2000.[6]
@@ -91,7 +85,7 @@ URL (1 / 10): https://en.wikipedia.org/wiki/Bill_Gates
 
 
 	Extracted annotations for  7  out of total  51  sentences
-	Relations extracted from this website: 9 (Overall: 10)
+	Relations extracted from this website: 8 (Overall: 9)
 
 
 URL (2 / 10): https://twitter.com/BillGates
@@ -108,7 +102,7 @@ URL (4 / 10): https://news.microsoft.com/tag/bill-gates/
 	Skipping the URL as no text was extracted
 URL (5 / 10): https://www.britannica.com/biography/Bill-Gates
 	Fetching text from url...
-	trimming webpage length from 12444 to 10000
+	trimming webpage length from 12463 to 10000
 	Webpage length (num characters): 10000
 	Annotating the webpage using spacy ...
 	Extracted 62 sentences. Processing each sentence one by one to check for presence of right pair of named entity types; if so, will run the second pipeline ...
@@ -119,13 +113,13 @@ URL (5 / 10): https://www.britannica.com/biography/Bill-Gates
 	Processed 25 / 62 sentences
 	Processed 30 / 62 sentences
 	Processed 35 / 62 sentences
+	Processed 40 / 62 sentences
 		=== Extracted Relation ===
 		Sentence: Where did Bill Gates go to college?Bill Gates attended Harvard University.
 		Subject: Bill Gates ; Object: Harvard University ;
 		Adding to set of extracted relations
 		================
 
-	Processed 40 / 62 sentences
 		=== Extracted Relation ===
 		Sentence: What are Bill Gates’s major accomplishments?Bill Gates founded the software company Microsoft Corporation with his friend Paul Allen.
 		Subject: Bill Gates ; Object: Microsoft Corporation ;
@@ -170,15 +164,9 @@ URL (7 / 10): https://www.hindustantimes.com/business/who-is-bill-gates-girlfrie
 	Skipping the URL as no text was extracted
 URL (8 / 10): https://www.forbes.com/profile/bill-gates/
 	Fetching text from url...
-	Webpage length (num characters): 7075
+	Webpage length (num characters): 6867
 	Annotating the webpage using spacy ...
 	Extracted 35 sentences. Processing each sentence one by one to check for presence of right pair of named entity types; if so, will run the second pipeline ...
-		=== Extracted Relation ===
-		Sentence: In PROFILEBill GatesCochair, Bill & Melinda Gates Foundation$130.8B$66M (0.05%)Real Time Net Worthas of 3/26/24Reflects change since 5 pm ET of prior trading day.#7 in the world todayPhoto
-		Subject: Bill Gates ; Object: Bill & Melinda Gates Foundation ;
-		Adding to set of extracted relations
-		================
-
 		=== Extracted Relation ===
 		Sentence: by John KeatleyAbout Bill GatesBill Gates turned his fortune from software firm Microsoft into diversified holdings including investments in zero-carbon energy companiesIn May 2021, Bill and Melinda Gates each announced on Twitter they were ending their marriage after 27 years.
 		Subject: Bill Gates ; Object: Microsoft ;
@@ -212,8 +200,8 @@ URL (8 / 10): https://www.forbes.com/profile/bill-gates/
 	Processed 35 / 35 sentences
 
 
-	Extracted annotations for  5  out of total  35  sentences
-	Relations extracted from this website: 1 (Overall: 5)
+	Extracted annotations for  4  out of total  35  sentences
+	Relations extracted from this website: 0 (Overall: 4)
 
 
 URL (9 / 10): https://answers.microsoft.com/en-us/outlook_com/forum/all/microsoft-and-bill-gates-are-so-damn-screwed-up/cd76d0e2-ece4-45db-8886-00d557d593e2
@@ -231,18 +219,16 @@ URL (10 / 10): https://www.gatesnotes.com/The-Age-of-AI-Has-Begun
 	Fetching text from url...
 	Failed to retrieve content from URL: https://www.gatesnotes.com/The-Age-of-AI-Has-Begun. Status code: 403
 	Skipping the URL as no text was extracted
-================== ALL RELATIONS for Work_For ( 13 ) =================
-Subject: Gates                               | Object: Harvard University
-Subject: Satya Nadella                       | Object: Microsoft
-Subject: Gates                               | Object: Bill & Melinda Gates Foundation
+================== ALL RELATIONS for Work_For ( 11 ) =================
 Subject: Bill Gates                          | Object: Microsoft Corporation
-Subject: William Henry Gates III             | Object: Microsoft
-Subject: Gates                               | Object: Lakeside School
-Subject: he                                  | Object: Microsoft
 Subject: Bill Gates                          | Object: Microsoft
-Subject: Bill Gates                          | Object: Harvard University
-Subject: Gates                               | Object: Microsoft
-Subject: Allen                               | Object: Microsoft
-Subject: Bill Gates                          | Object: Bill & Melinda Gates Foundation
 Subject: Gates                               | Object: Berkshire Hathaway
+Subject: Gates                               | Object: Bill & Melinda Gates Foundation
+Subject: Gates                               | Object: Harvard University
+Subject: Allen                               | Object: Microsoft
+Subject: Satya Nadella                       | Object: Microsoft
+Subject: Gates                               | Object: Lakeside School
+Subject: Gates                               | Object: Microsoft
+Subject: Bill Gates                          | Object: Harvard University
+Subject: William Henry Gates III             | Object: Microsoft
 Total # of iterations = 1

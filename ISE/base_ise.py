@@ -4,6 +4,7 @@ import spacy
 from SpanBERT.spacy_help_functions import create_entity_pairs
 
 from bs4 import BeautifulSoup
+from bs4.element import Comment
 import re
 import requests
 import requests.exceptions as rexceptions
@@ -59,6 +60,13 @@ class BaseISE:
         indent = ''.join(indent)
         print(f"{indent}{message}") 
 
+    def check_for_proper_text(element):
+        if isinstance(element, Comment):
+            return False
+        if element.parent.name in ['style', 'script', 'head', 'title', 'meta', '[document]']:
+            return False
+        return True
+
     def download_text_from_url(self, url):
         # downloads a text from a url and trims it to 10000 characters maximum
         # prints the status code if an error is encountered
@@ -67,10 +75,12 @@ class BaseISE:
             response = requests.get(url)
             if response.status_code == 200:
                 soup = BeautifulSoup(response.content, 'html.parser')
-                text = soup.get_text()
-                text = re.sub(r'\n+', ' ', text)
-                text = re.sub(r'\t+', ' ', text)
-                text = re.sub(r'\s+', ' ', text)
+                texts = soup.findAll(text=True)
+                proper_texts = filter(check_for_proper_text, texts)
+                # text = re.sub(r'\n+', ' ', text)
+                # text = re.sub(r'\t+', ' ', text)
+                # text = re.sub(r'\s+', ' ', text)
+                text = u" ".join(t.strip() for t in proper_texts) 
                 if text is not None and len(text)>10000:
                     self.level_log(f'trimming webpage length from {len(text)} to 10000', level = 1)
                     text = text[:10000]
