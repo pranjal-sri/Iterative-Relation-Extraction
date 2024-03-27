@@ -1,13 +1,13 @@
 import requests
 import sys
-from bs4 import BeautifulSoup
 import re
-import requests.exceptions as rexceptions
+from requests.exceptions import  RequestException, Timeout, TooManyRedirects, JSONDecodeError
+
 
 class QueryManager:
 
     # initializing object constructor with required parameters
-    def __init__(self, API_KEY, engine_id, number_of_results = 10, feature_mapping = None):
+    def _init_(self, API_KEY, engine_id, number_of_results = 10, feature_mapping = None):
         self.API_KEY = API_KEY
         self.engine_id = engine_id
         self.number_of_results = number_of_results
@@ -19,7 +19,7 @@ class QueryManager:
                                     'title': 'Title',
                                     'snippet': 'Summary'}
     
-    def __repr__(self) -> str:
+    def _repr_(self) -> str:
         return f'\nQueryManager(API_KEY={self.API_KEY}, engine_id={self.engine_id},\n number_of_results = {self.number_of_results}, feature_mapping = {self.feature_mapping})'
     
     def query(self, query):
@@ -34,16 +34,16 @@ class QueryManager:
             return items
         
         # chekcing for all other types of errors in case of using requests.get()
-        except rexceptions.Timeout:
+        except Timeout:
             print("QUERY ERROR: Timeout occured")
             sys.exit()
-        except rexceptions.TooManyRedirects:
+        except TooManyRedirects:
             print("QUERY ERROR: Too many redirects")
             sys.exit()
-        except rexceptions.JSONDecodeError:
+        except JSONDecodeError:
             print("QUERY ERROR: JSON response can't be parsed")
             sys.exit()
-        except rexceptions.RequestException:
+        except RequestException:
             print("QUERY ERROR: Connection error")
             sys.exit()
 
@@ -70,13 +70,12 @@ class QueryManager:
             # this ensures that we select x out of first 10 results
             if set(self.feature_mapping.keys()).issubset(set(result.keys())):
                 item = {mapping: result[feature] for feature, mapping in self.feature_mapping.items()}
-                # text = self.__extract_text_from_url(result['link'])
-                # if text is not None and len(text)>10000: text = text[:10000]
-                # item['text'] = text
                 items.append(item)
             else:
                 continue
         return items
+    
 
-if __name__ == '__main__':
+
+if _name_ == '_main_':
     pass
